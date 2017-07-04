@@ -1,0 +1,35 @@
+//
+//  PrefixHeader.pch
+//  AllDemo
+//
+//  Created by yuhui on 16/12/27.
+//  Copyright © 2016年 yuhui. All rights reserved.
+//
+
+/******************** PCH 文件的创建和配置 *******************/
+/** *
+ * 新建文件 com + N 选择Other 中的pch 文件
+ * 在build settings 中输入 prefix 找到 PrefixHeader 并设置为.pch
+ * 文件路径  AllDemo/PerfixPCH/PrefixHeader.pch
+ * */
+/********************     需要引导路径    *******************/
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "Masonry.h"
+#import "AFHTTPSessionManager.h" 
+#import "UIImageView+WebCache.h"
+
+#define kSCREENWIDTH  [UIScreen mainScreen].bounds.size.width    // 获取屏幕宽度
+#define kSCREENHEIGHT [UIScreen mainScreen].bounds.size.height   // 获取屏幕高度
+
+#import "Utility.h"  // 颜色转换工具 直接使用十六进制字符
+
+#import "CreateViewFactory.h"  // 对于 UILable And UIImageView 的快速创建
+#import "HWActivityIndicator.h"  // 网络请求上传时的动画
+
+#import "PNChart.h"        // 第三方图形
+
+
+#endif /* PrefixHeader_pch */
