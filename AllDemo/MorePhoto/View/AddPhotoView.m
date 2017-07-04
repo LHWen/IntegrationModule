@@ -17,12 +17,15 @@
 {
     UIView *_imagesView;           // 显示图片视图
     NSMutableArray *_imageArray;   // 保存图片数组
+    NSMutableArray *_imagePatchArr; // 图片数组路径
     UIImageView *_deleteImageView; // 删除的图片视图
     CGRect _showImageFrame;        // 显示大图的位置大小
     NSInteger _i; // 当前显示的最后一张图片
     UIScrollView *_scrollView;
     UIImageView *_showScrollImgView;
     UIImageView *_showImageView;   // 显示大图的视图
+    
+    NSInteger _deleteIndex; // 删除项
 }
 
 @property (nonatomic, strong) UIButton *addImageButton;
@@ -47,6 +50,7 @@
     self = [super init];
     if (self) {
         _imageArray = [[NSMutableArray alloc] init];
+        _imagePatchArr = [[NSMutableArray alloc] init];
         _i = 0;
         
         [self initDefault];
@@ -177,7 +181,17 @@
     
     [picker dismissViewControllerAnimated:YES completion:nil];           // 销毁控制器
     UIImage *image = info[UIImagePickerControllerOriginalImage];
-    [self addPhotoToView:image];    // 设置图片
+//    [self addPhotoToView:image];    // 设置图片
+    
+    NSData *imageData = UIImageJPEGRepresentation(image, 0.5);
+    NSDate *date = [NSDate date];
+    NSString *tempFileDirectory = NSTemporaryDirectory();
+    NSString *tempFilePath = [tempFileDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%ld.jpg", (long)date.timeIntervalSince1970]];
+    
+    [imageData writeToFile:tempFilePath atomically:YES];
+    
+    [self addPhotoToView:image addImagePath:tempFilePath];
+
    
     // 当image从相机中获取的时候存入相册中
     if (picker.sourceType == UIImagePickerControllerSourceTypeCamera) {
@@ -215,7 +229,14 @@
                 
                 if (_imageArray.count < _maxImagesCount) {
                     
-                    [self addPhotoToView:image];
+                    NSData *imageData = UIImageJPEGRepresentation(image, 0.5);
+                    NSDate *date = [NSDate date];
+                    NSString *tempFileDirectory = NSTemporaryDirectory();
+                    NSString *tempFilePath = [tempFileDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%ld.jpg", (long)date.timeIntervalSince1970]];
+                    
+                    [imageData writeToFile:tempFilePath atomically:YES];
+                    
+                    [self addPhotoToView:image addImagePath:tempFilePath];
                 }
             } else {
                 //                NSLog(@"UIImagePickerControllerReferenceURL = %@", dict);
@@ -232,9 +253,10 @@
     [_controller dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)addPhotoToView:(UIImage *)image {
+- (void)addPhotoToView:(UIImage *)image addImagePath:(NSString *)imagePath {
     
     [_imageArray addObject:image];
+    [_imagePatchArr addObject:imagePath];
     
     UIImageView *imageView = [[UIImageView alloc] init];
     imageView.image = image;
@@ -246,7 +268,7 @@
     [_imagesView addSubview:imageView];
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.frame           = CGRectMake(_imageSize-20, 0, 20, 20);
+    button.frame = CGRectMake(_imageSize-15, -5, 20, 20);
     button.tag = 100 + _i;
     button.backgroundColor = [UIColor clearColor];
     [button setBackgroundImage:[UIImage imageNamed:@"new_pro_photo_delete"] forState:UIControlStateNormal];
@@ -275,29 +297,30 @@
     NSInteger count  = tap.view.tag - 100;
     _showImageFrame = CGRectMake((count % _imagesInRow) * _imageSize + _imageMargin * count, (count / _imagesInRow) * _imageSize, _imageSize, _imageSize);
     
-    [UIView animateKeyframesWithDuration:.3 delay:0.0 options:0 animations:^{
-        
-        /**
-         *  分步动画   第一个参数是该动画开始的百分比时间  第二个参数是该动画持续的百分比时间
-         */
-        [UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration:0.2 animations:^{
-            _showImageView.transform = CGAffineTransformRotate(CGAffineTransformMakeScale(1.3, 1.4), 0);
-        }];
-        [UIView addKeyframeWithRelativeStartTime:0.2 relativeDuration:0.3 animations:^{
-            _showImageView.transform = CGAffineTransformRotate(CGAffineTransformMakeScale(1.5, 1.5), 0);
-        }];
-        [UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.4 animations:^{
-            _showImageView.transform = CGAffineTransformRotate(CGAffineTransformMakeScale(1.8, 1.8), 0);
-            _showImageView.center = _controller.view.center;
-        }];
-        [UIView addKeyframeWithRelativeStartTime:0.9 relativeDuration:0.1 animations:^{
-            _showImageView.transform = CGAffineTransformRotate(CGAffineTransformMakeScale(2.2, 2.2), 0);
-        }];
-        
-    } completion:^(BOOL finished) {
-        
-        [self setScrollViewAndShowImage];
-    }];
+    [self setScrollViewAndShowImage];
+    
+//    [UIView animateKeyframesWithDuration:.3 delay:0.0 options:0 animations:^{
+//        
+//        //  分步动画   第一个参数是该动画开始的百分比时间  第二个参数是该动画持续的百分比时间
+//
+//        [UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration:0.2 animations:^{
+//            _showImageView.transform = CGAffineTransformRotate(CGAffineTransformMakeScale(1.3, 1.4), 0);
+//        }];
+//        [UIView addKeyframeWithRelativeStartTime:0.2 relativeDuration:0.3 animations:^{
+//            _showImageView.transform = CGAffineTransformRotate(CGAffineTransformMakeScale(1.5, 1.5), 0);
+//        }];
+//        [UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.4 animations:^{
+//            _showImageView.transform = CGAffineTransformRotate(CGAffineTransformMakeScale(1.8, 1.8), 0);
+//            _showImageView.center = _controller.view.center;
+//        }];
+//        [UIView addKeyframeWithRelativeStartTime:0.9 relativeDuration:0.1 animations:^{
+//            _showImageView.transform = CGAffineTransformRotate(CGAffineTransformMakeScale(2.2, 2.2), 0);
+//        }];
+//        
+//    } completion:^(BOOL finished) {
+//        
+//        [self setScrollViewAndShowImage];
+//    }];
 }
 
 /** --------------长按删除照片手势--------------- */
@@ -316,6 +339,7 @@
 - (void)deletePhotobuttonClick:(UIButton *)button {
     
     _deleteImageView = [[UIImageView alloc] initWithImage:_imageArray[button.tag - 100]];
+    _deleteIndex = button.tag - 100;
     
    [self setDeletePhotoActionSheet];
 }
@@ -343,6 +367,7 @@
         [view removeFromSuperview];
     }
     [_imageArray removeObject:_deleteImageView.image];
+    [_imagePatchArr removeObjectAtIndex:_deleteIndex];
     
     _i -= 1;
     
@@ -427,16 +452,14 @@
     [[UIApplication sharedApplication].keyWindow addSubview:_scrollView];
     
     
-    [UIView animateWithDuration:0.2 animations:^{
+    [UIView animateWithDuration:0.3 animations:^{
         
         _scrollView.frame = targetFrame;
-        
         _showScrollImgView.frame = targetFrame;
         
     } completion:^(BOOL finished) {
         _scrollView.contentSize = CGSizeMake(CGRectGetWidth([UIScreen mainScreen].bounds), CGRectGetHeight([UIScreen mainScreen].bounds));
     }];
-
 }
 
 #pragma  mark - 滚动视图的代理协议中的方法
@@ -447,59 +470,57 @@
 
 - (void)dismissViewClick {
     
-    /**
     [UIView animateWithDuration:0.3 animations:^{
-        
-        _scrollView.frame = CGRectMake(0, 0, 0, 0);
-        _scrollView.center = _controller.view.center;
-        
+        _showScrollImgView.alpha = 0.0;
+        _scrollView.alpha = 0.0;
+        _showImageView.frame = _showImageFrame;
     } completion:^(BOOL finished) {
-        [_scrollView removeFromSuperview];
         [_showScrollImgView removeFromSuperview];
+        [_scrollView removeFromSuperview];
         _showScrollImgView = nil;
         _scrollView = nil;
     }];
-     */
     
-    [UIView animateKeyframesWithDuration:.5 delay:0.0 options:0 animations:^{
-        
-        [_scrollView removeFromSuperview];
-        [_showScrollImgView removeFromSuperview];
-        _showScrollImgView = nil;
-        _scrollView = nil;
-        
-    } completion:^(BOOL finished) {
-        
-        [UIView animateKeyframesWithDuration:.5 delay:0.0 options:0 animations:^{
-            
-            /**
-             *  分步动画   第一个参数是该动画开始的百分比时间  第二个参数是该动画持续的百分比时间
-             */
-            [UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration:0.2 animations:^{
-                _showImageView.center = _controller.view.center;
-                _showImageView.transform = CGAffineTransformRotate(CGAffineTransformMakeScale(2.0, 2.0), 0);
-            }];
-            [UIView addKeyframeWithRelativeStartTime:0.2 relativeDuration:0.3 animations:^{
-                _showImageView.transform = CGAffineTransformRotate(CGAffineTransformMakeScale(1.8, 1.8), 0);
-            }];
-            [UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.2 animations:^{
-                _showImageView.transform = CGAffineTransformRotate(CGAffineTransformMakeScale(1.5, 1.5), 0);
-            }];
-            [UIView addKeyframeWithRelativeStartTime:0.7 relativeDuration:0.3 animations:^{
-                _showImageView.transform = CGAffineTransformRotate(CGAffineTransformMakeScale(1.0, 1.0), 0);
-                 _showImageView.frame = _showImageFrame;
-            }];
-            
-        } completion:^(BOOL finished) {
-            
-        }];
-
-    }];
-    
+//    [UIView animateKeyframesWithDuration:.5 delay:0.0 options:0 animations:^{
+//        
+//        [_scrollView removeFromSuperview];
+//        [_showScrollImgView removeFromSuperview];
+//        _showScrollImgView = nil;
+//        _scrollView = nil;
+//        
+//    } completion:^(BOOL finished) {
+//        
+//        [UIView animateKeyframesWithDuration:.5 delay:0.0 options:0 animations:^{
+//            
+//            // *  分步动画   第一个参数是该动画开始的百分比时间  第二个参数是该动画持续的百分比时间
+//            [UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration:0.2 animations:^{
+//                _showImageView.center = _controller.view.center;
+//                _showImageView.transform = CGAffineTransformRotate(CGAffineTransformMakeScale(2.0, 2.0), 0);
+//            }];
+//            [UIView addKeyframeWithRelativeStartTime:0.2 relativeDuration:0.3 animations:^{
+//                _showImageView.transform = CGAffineTransformRotate(CGAffineTransformMakeScale(1.8, 1.8), 0);
+//            }];
+//            [UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.2 animations:^{
+//                _showImageView.transform = CGAffineTransformRotate(CGAffineTransformMakeScale(1.5, 1.5), 0);
+//            }];
+//            [UIView addKeyframeWithRelativeStartTime:0.7 relativeDuration:0.3 animations:^{
+//                _showImageView.transform = CGAffineTransformRotate(CGAffineTransformMakeScale(1.0, 1.0), 0);
+//                 _showImageView.frame = _showImageFrame;
+//            }];
+//            
+//        } completion:^(BOOL finished) {
+//            
+//        }];
+//
+//    }];
 }
 
-- (NSArray *) getArray {
+- (NSArray *)getArray {
     return _imageArray;
+}
+
+- (NSArray *)getImagePathArray {
+    return _imagePatchArr;
 }
 
 @end

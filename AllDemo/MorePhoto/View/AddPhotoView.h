@@ -20,6 +20,10 @@
 
 - (void)initView;
 
-- (NSArray *) getArray;
+// 获取图片数组
+- (NSArray *)getArray;
+
+// 获取图片地址信息，用于 PUT 上传图片
+- (NSArray *)getImagePathArray;
 
 @end
