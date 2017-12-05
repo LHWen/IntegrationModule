@@ -99,4 +99,18 @@
     [_searchBar resignFirstResponder];
 }
 
+- (void)dealloc {
+    
+    [self clearAllCache];
+}
+
+// 清除缓存
+- (void)clearAllCache {
+    // remove cache rsp
+    [[NSURLCache sharedURLCache] removeAllCachedResponses];
+    
+    [[NSURLCache sharedURLCache] setDiskCapacity:0];
+    [[NSURLCache sharedURLCache] setMemoryCapacity:0];
+}
+
 @end

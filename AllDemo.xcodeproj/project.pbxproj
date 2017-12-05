@@ -165,9 +165,18 @@
 		0CE66F671EEA8CF900904EAF /* testCharts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE66F651EEA8CF900904EAF /* testCharts.swift */; };
 		0CF49C191E8E362500073873 /* KWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF49C181E8E362500073873 /* KWebViewViewController.m */; };
 		23F3BB9F8C78C31A4C2B8499 /* Pods_AllDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A92375A609DB6B5C5504E2E /* Pods_AllDemo.framework */; };
+		610F11D41F7DE5AA00A39DC2 /* WaveToolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 610F11D31F7DE5AA00A39DC2 /* WaveToolViewController.m */; };
 		611E11871F05FC4B009AF547 /* MoveCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 611E11861F05FC4B009AF547 /* MoveCollectionViewController.m */; };
+		616E60081F7DE3B600E35E9E /* WaveToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 616E60071F7DE3B600E35E9E /* WaveToolView.m */; };
+		6197BFE61F5D54CD003922F9 /* CreatQRImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6197BFE51F5D54CD003922F9 /* CreatQRImage.m */; };
+		6197BFE91F5D55DB003922F9 /* QRImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6197BFE81F5D55DB003922F9 /* QRImageViewController.m */; };
 		61AA58EA1F09E5F70045C776 /* SystemShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61AA58E91F09E5F70045C776 /* SystemShareViewController.m */; };
 		61AA58ED1F09E6C10045C776 /* SystemShareHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 61AA58EC1F09E6C10045C776 /* SystemShareHelper.m */; };
+		61C70B691FA063B90059A7EE /* BlockChilckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C70B681FA063B90059A7EE /* BlockChilckViewController.m */; };
+		61F495F11F8C9C6B0021EEEB /* BaseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 61F495F01F8C9C6B0021EEEB /* BaseOperation.m */; };
+		61F495F41F8C9E390021EEEB /* TestBlockOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 61F495F31F8C9E390021EEEB /* TestBlockOperation.m */; };
+		61F495F71F8C9F2A0021EEEB /* TestBlockTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 61F495F61F8C9F2A0021EEEB /* TestBlockTool.m */; };
+		61F495FA1F8CA2C70021EEEB /* TestBlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61F495F91F8CA2C70021EEEB /* TestBlockViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -419,12 +428,30 @@
 		0CF49C181E8E362500073873 /* KWebViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWebViewViewController.m; sourceTree = "<group>"; };
 		2A92375A609DB6B5C5504E2E /* Pods_AllDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AllDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56C48497520584108F47C13B /* Pods-AllDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AllDemo/Pods-AllDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		610F11D21F7DE5AA00A39DC2 /* WaveToolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveToolViewController.h; sourceTree = "<group>"; };
+		610F11D31F7DE5AA00A39DC2 /* WaveToolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveToolViewController.m; sourceTree = "<group>"; };
 		611E11851F05FC4B009AF547 /* MoveCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoveCollectionViewController.h; sourceTree = "<group>"; };
 		611E11861F05FC4B009AF547 /* MoveCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoveCollectionViewController.m; sourceTree = "<group>"; };
+		616E60061F7DE3B600E35E9E /* WaveToolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveToolView.h; sourceTree = "<group>"; };
+		616E60071F7DE3B600E35E9E /* WaveToolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveToolView.m; sourceTree = "<group>"; };
+		6197BFE41F5D54CD003922F9 /* CreatQRImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatQRImage.h; sourceTree = "<group>"; };
+		6197BFE51F5D54CD003922F9 /* CreatQRImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatQRImage.m; sourceTree = "<group>"; };
+		6197BFE71F5D55DB003922F9 /* QRImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRImageViewController.h; sourceTree = "<group>"; };
+		6197BFE81F5D55DB003922F9 /* QRImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRImageViewController.m; sourceTree = "<group>"; };
 		61AA58E81F09E5F70045C776 /* SystemShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemShareViewController.h; sourceTree = "<group>"; };
 		61AA58E91F09E5F70045C776 /* SystemShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemShareViewController.m; sourceTree = "<group>"; };
 		61AA58EB1F09E6C10045C776 /* SystemShareHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemShareHelper.h; sourceTree = "<group>"; };
 		61AA58EC1F09E6C10045C776 /* SystemShareHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemShareHelper.m; sourceTree = "<group>"; };
+		61C70B671FA063B90059A7EE /* BlockChilckViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockChilckViewController.h; sourceTree = "<group>"; };
+		61C70B681FA063B90059A7EE /* BlockChilckViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockChilckViewController.m; sourceTree = "<group>"; };
+		61F495EF1F8C9C6B0021EEEB /* BaseOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseOperation.h; sourceTree = "<group>"; };
+		61F495F01F8C9C6B0021EEEB /* BaseOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseOperation.m; sourceTree = "<group>"; };
+		61F495F21F8C9E390021EEEB /* TestBlockOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestBlockOperation.h; sourceTree = "<group>"; };
+		61F495F31F8C9E390021EEEB /* TestBlockOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestBlockOperation.m; sourceTree = "<group>"; };
+		61F495F51F8C9F2A0021EEEB /* TestBlockTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestBlockTool.h; sourceTree = "<group>"; };
+		61F495F61F8C9F2A0021EEEB /* TestBlockTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestBlockTool.m; sourceTree = "<group>"; };
+		61F495F81F8CA2C70021EEEB /* TestBlockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestBlockViewController.h; sourceTree = "<group>"; };
+		61F495F91F8CA2C70021EEEB /* TestBlockViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestBlockViewController.m; sourceTree = "<group>"; };
 		F6CD3D1E1ECE7B86637F0B60 /* Pods-AllDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-AllDemo/Pods-AllDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -549,6 +576,9 @@
 		0C69C8131E11123E00717ED6 /* AllDemo */ = {
 			isa = PBXGroup;
 			children = (
+				61F495EE1F8C9C420021EEEB /* BlockInBlock */,
+				616E60051F7DE38A00E35E9E /* WaveView */,
+				6197BFE31F5D54B2003922F9 /* QRImage */,
 				61AA58E71F09E5C90045C776 /* SystemShare */,
 				611E11841F05FBFD009AF547 /* MoveCollectionView */,
 				0CC760331EFB5ACF006C2C02 /* OperatingCondition */,
@@ -1050,6 +1080,28 @@
 			path = MoveCollectionView;
 			sourceTree = "<group>";
 		};
+		616E60051F7DE38A00E35E9E /* WaveView */ = {
+			isa = PBXGroup;
+			children = (
+				616E60061F7DE3B600E35E9E /* WaveToolView.h */,
+				616E60071F7DE3B600E35E9E /* WaveToolView.m */,
+				610F11D21F7DE5AA00A39DC2 /* WaveToolViewController.h */,
+				610F11D31F7DE5AA00A39DC2 /* WaveToolViewController.m */,
+			);
+			path = WaveView;
+			sourceTree = "<group>";
+		};
+		6197BFE31F5D54B2003922F9 /* QRImage */ = {
+			isa = PBXGroup;
+			children = (
+				6197BFE41F5D54CD003922F9 /* CreatQRImage.h */,
+				6197BFE51F5D54CD003922F9 /* CreatQRImage.m */,
+				6197BFE71F5D55DB003922F9 /* QRImageViewController.h */,
+				6197BFE81F5D55DB003922F9 /* QRImageViewController.m */,
+			);
+			path = QRImage;
+			sourceTree = "<group>";
+		};
 		61AA58E71F09E5C90045C776 /* SystemShare */ = {
 			isa = PBXGroup;
 			children = (
@@ -1060,6 +1112,24 @@
 			);
 			path = SystemShare;
 			sourceTree = "<group>";
+		};
+		61F495EE1F8C9C420021EEEB /* BlockInBlock */ = {
+			isa = PBXGroup;
+			children = (
+				61F495EF1F8C9C6B0021EEEB /* BaseOperation.h */,
+				61F495F01F8C9C6B0021EEEB /* BaseOperation.m */,
+				61F495F21F8C9E390021EEEB /* TestBlockOperation.h */,
+				61F495F31F8C9E390021EEEB /* TestBlockOperation.m */,
+				61F495F51F8C9F2A0021EEEB /* TestBlockTool.h */,
+				61F495F61F8C9F2A0021EEEB /* TestBlockTool.m */,
+				61F495F81F8CA2C70021EEEB /* TestBlockViewController.h */,
+				61F495F91F8CA2C70021EEEB /* TestBlockViewController.m */,
+				61C70B671FA063B90059A7EE /* BlockChilckViewController.h */,
+				61C70B681FA063B90059A7EE /* BlockChilckViewController.m */,
+			);
+			name = BlockInBlock;
+			path = AllDemo/BlockInBlock;
+			sourceTree = SOURCE_ROOT;
 		};
 		D7E28DB7CE1C14B8F677E16F /* Frameworks */ = {
 			isa = PBXGroup;
@@ -1285,8 +1355,10 @@
 				0C14E8321E49AB8C009979B3 /* EditorVideoController.m in Sources */,
 				0C38C5131E1DD7DE008975B0 /* AllViewController.m in Sources */,
 				0C7546B81E1254FF00681997 /* NSObject+Property.m in Sources */,
+				610F11D41F7DE5AA00A39DC2 /* WaveToolViewController.m in Sources */,
 				0C710E3E1E4C08FE00D1F7A7 /* UIImage+ImageWaterPrint.m in Sources */,
 				0C1418261E446B21007A1FCE /* BulletView.m in Sources */,
+				6197BFE91F5D55DB003922F9 /* QRImageViewController.m in Sources */,
 				611E11871F05FC4B009AF547 /* MoveCollectionViewController.m in Sources */,
 				0C75A8B81E13A10E007FC044 /* SimpleCollectionViewCell.m in Sources */,
 				0C8CF9F81EE6B3700067CEB8 /* NinaViewController.m in Sources */,
@@ -1294,6 +1366,8 @@
 				0C8CF9FB1EE6B3800067CEB8 /* Test1ViewController.m in Sources */,
 				0C75A8BA1E13A10E007FC044 /* FootCollectionReusableView.m in Sources */,
 				0CC7603C1EFB607A006C2C02 /* LeftCollectionViewCell.m in Sources */,
+				61F495F71F8C9F2A0021EEEB /* TestBlockTool.m in Sources */,
+				616E60081F7DE3B600E35E9E /* WaveToolView.m in Sources */,
 				0C14E82A1E496871009979B3 /* ChooseImageController.m in Sources */,
 				0C7546981E123DD500681997 /* MaskViewController.m in Sources */,
 				0C6F0DA21ED284020035B157 /* BarChartViewController.m in Sources */,
@@ -1306,6 +1380,7 @@
 				0C75469B1E123DFC00681997 /* MaskView.m in Sources */,
 				0C7546E61E12673100681997 /* ELCOverlayImageView.m in Sources */,
 				0C75A8921E1398EB007FC044 /* LodingViewController.m in Sources */,
+				61F495FA1F8CA2C70021EEEB /* TestBlockViewController.m in Sources */,
 				0C65132C1E2DEE630054A61B /* DateView.m in Sources */,
 				0C75467F1E1201BA00681997 /* LoginViewController.m in Sources */,
 				0C7546931E12152100681997 /* CountDownViewController.m in Sources */,
@@ -1325,12 +1400,15 @@
 				0CE66F671EEA8CF900904EAF /* testCharts.swift in Sources */,
 				0C75468A1E1205C000681997 /* CreateViewFactory.m in Sources */,
 				0C7546C71E12655700681997 /* AddPhotoView.m in Sources */,
+				61C70B691FA063B90059A7EE /* BlockChilckViewController.m in Sources */,
 				0C38C5191E1E1A34008975B0 /* TitleScrollView.m in Sources */,
 				0C8CF9FE1EE6B3890067CEB8 /* Test2ViewController.m in Sources */,
 				0C710E381E4C08FE00D1F7A7 /* ImgViewController.m in Sources */,
+				6197BFE61F5D54CD003922F9 /* CreatQRImage.m in Sources */,
 				61AA58EA1F09E5F70045C776 /* SystemShareViewController.m in Sources */,
 				0CBB5C551E2F08A700A3F505 /* ShufflingCollectionViewCell.m in Sources */,
 				0CC75C531EE4EA4800AACA57 /* PieChartsViewController.m in Sources */,
+				61F495F41F8C9E390021EEEB /* TestBlockOperation.m in Sources */,
 				0CF49C191E8E362500073873 /* KWebViewViewController.m in Sources */,
 				0CC7603F1EFB6085006C2C02 /* RightCollectionViewCell.m in Sources */,
 				0C75A8D21E13A10E007FC044 /* WaterViewController.m in Sources */,
@@ -1348,6 +1426,7 @@
 				0C7546A31E124D1600681997 /* HWFoldHeaderView.m in Sources */,
 				0CC760361EFB5F0A006C2C02 /* OperatingViewController.m in Sources */,
 				0C7546E51E12673100681997 /* ELCImagePickerController.m in Sources */,
+				61F495F11F8C9C6B0021EEEB /* BaseOperation.m in Sources */,
 				0C69C8161E11123E00717ED6 /* main.m in Sources */,
 				0C710E3D1E4C08FE00D1F7A7 /* UIImage+ImageScale.m in Sources */,
 			);
