@@ -167,6 +167,8 @@
 		23F3BB9F8C78C31A4C2B8499 /* Pods_AllDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A92375A609DB6B5C5504E2E /* Pods_AllDemo.framework */; };
 		610F11D41F7DE5AA00A39DC2 /* WaveToolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 610F11D31F7DE5AA00A39DC2 /* WaveToolViewController.m */; };
 		611E11871F05FC4B009AF547 /* MoveCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 611E11861F05FC4B009AF547 /* MoveCollectionViewController.m */; };
+		61688A331FD647B700783343 /* TestBouncesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61688A321FD647B700783343 /* TestBouncesViewController.m */; };
+		61688A361FD64D3A00783343 /* LeftSuspensionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 61688A351FD64D3A00783343 /* LeftSuspensionView.m */; };
 		616E60081F7DE3B600E35E9E /* WaveToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 616E60071F7DE3B600E35E9E /* WaveToolView.m */; };
 		6197BFE61F5D54CD003922F9 /* CreatQRImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6197BFE51F5D54CD003922F9 /* CreatQRImage.m */; };
 		6197BFE91F5D55DB003922F9 /* QRImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6197BFE81F5D55DB003922F9 /* QRImageViewController.m */; };
@@ -432,6 +434,10 @@
 		610F11D31F7DE5AA00A39DC2 /* WaveToolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveToolViewController.m; sourceTree = "<group>"; };
 		611E11851F05FC4B009AF547 /* MoveCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoveCollectionViewController.h; sourceTree = "<group>"; };
 		611E11861F05FC4B009AF547 /* MoveCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoveCollectionViewController.m; sourceTree = "<group>"; };
+		61688A311FD647B700783343 /* TestBouncesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestBouncesViewController.h; sourceTree = "<group>"; };
+		61688A321FD647B700783343 /* TestBouncesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestBouncesViewController.m; sourceTree = "<group>"; };
+		61688A341FD64D3A00783343 /* LeftSuspensionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeftSuspensionView.h; sourceTree = "<group>"; };
+		61688A351FD64D3A00783343 /* LeftSuspensionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeftSuspensionView.m; sourceTree = "<group>"; };
 		616E60061F7DE3B600E35E9E /* WaveToolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveToolView.h; sourceTree = "<group>"; };
 		616E60071F7DE3B600E35E9E /* WaveToolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveToolView.m; sourceTree = "<group>"; };
 		6197BFE41F5D54CD003922F9 /* CreatQRImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatQRImage.h; sourceTree = "<group>"; };
@@ -576,6 +582,7 @@
 		0C69C8131E11123E00717ED6 /* AllDemo */ = {
 			isa = PBXGroup;
 			children = (
+				61688A2E1FD6479800783343 /* BouncesView */,
 				61F495EE1F8C9C420021EEEB /* BlockInBlock */,
 				616E60051F7DE38A00E35E9E /* WaveView */,
 				6197BFE31F5D54B2003922F9 /* QRImage */,
@@ -1080,6 +1087,33 @@
 			path = MoveCollectionView;
 			sourceTree = "<group>";
 		};
+		61688A2E1FD6479800783343 /* BouncesView */ = {
+			isa = PBXGroup;
+			children = (
+				61688A2F1FD6479800783343 /* View */,
+				61688A301FD6479800783343 /* ViewController */,
+			);
+			path = BouncesView;
+			sourceTree = "<group>";
+		};
+		61688A2F1FD6479800783343 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				61688A341FD64D3A00783343 /* LeftSuspensionView.h */,
+				61688A351FD64D3A00783343 /* LeftSuspensionView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		61688A301FD6479800783343 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				61688A311FD647B700783343 /* TestBouncesViewController.h */,
+				61688A321FD647B700783343 /* TestBouncesViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		616E60051F7DE38A00E35E9E /* WaveView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1389,6 +1423,7 @@
 				0C75A8B91E13A10E007FC044 /* UIconllectionViewSimpleVC.m in Sources */,
 				0C75A88E1E13984F007FC044 /* HWActivityIndicator.m in Sources */,
 				0C7546E31E12673100681997 /* ELCAssetTablePicker.m in Sources */,
+				61688A361FD64D3A00783343 /* LeftSuspensionView.m in Sources */,
 				0C69C8191E11123E00717ED6 /* AppDelegate.m in Sources */,
 				0CBB6EA81E31B43800E933DD /* AnimateViewController.m in Sources */,
 				0C7546E01E12673100681997 /* ELCAlbumPickerController.m in Sources */,
@@ -1402,6 +1437,7 @@
 				0C7546C71E12655700681997 /* AddPhotoView.m in Sources */,
 				61C70B691FA063B90059A7EE /* BlockChilckViewController.m in Sources */,
 				0C38C5191E1E1A34008975B0 /* TitleScrollView.m in Sources */,
+				61688A331FD647B700783343 /* TestBouncesViewController.m in Sources */,
 				0C8CF9FE1EE6B3890067CEB8 /* Test2ViewController.m in Sources */,
 				0C710E381E4C08FE00D1F7A7 /* ImgViewController.m in Sources */,
 				6197BFE61F5D54CD003922F9 /* CreatQRImage.m in Sources */,
