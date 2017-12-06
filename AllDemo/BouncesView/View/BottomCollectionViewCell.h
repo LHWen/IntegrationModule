@@ -1,5 +1,5 @@
 //
-//  TestBouncesViewController.h
+//  BottomCollectionViewCell.h
 //  AllDemo
 //
 //  Created by LHWen on 2017/12/5.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-// 弹框VC测试
+@interface BottomCollectionViewCell : UICollectionViewCell
 
-@interface TestBouncesViewController : UIViewController
+@property (nonatomic, strong) UILabel *titleLable;
 
 @end

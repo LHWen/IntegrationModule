@@ -165,10 +165,14 @@
 		0CE66F671EEA8CF900904EAF /* testCharts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE66F651EEA8CF900904EAF /* testCharts.swift */; };
 		0CF49C191E8E362500073873 /* KWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF49C181E8E362500073873 /* KWebViewViewController.m */; };
 		23F3BB9F8C78C31A4C2B8499 /* Pods_AllDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A92375A609DB6B5C5504E2E /* Pods_AllDemo.framework */; };
+		610870B91FD783860051323A /* CenterSuspensionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 610870B81FD783860051323A /* CenterSuspensionView.m */; };
 		610F11D41F7DE5AA00A39DC2 /* WaveToolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 610F11D31F7DE5AA00A39DC2 /* WaveToolViewController.m */; };
 		611E11871F05FC4B009AF547 /* MoveCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 611E11861F05FC4B009AF547 /* MoveCollectionViewController.m */; };
 		61688A331FD647B700783343 /* TestBouncesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61688A321FD647B700783343 /* TestBouncesViewController.m */; };
 		61688A361FD64D3A00783343 /* LeftSuspensionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 61688A351FD64D3A00783343 /* LeftSuspensionView.m */; };
+		61688A391FD6886E00783343 /* TopSuspensionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 61688A381FD6886E00783343 /* TopSuspensionView.m */; };
+		61688A3C1FD692BD00783343 /* BottomSuspensionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 61688A3B1FD692BD00783343 /* BottomSuspensionView.m */; };
+		61688A3F1FD693FA00783343 /* BottomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 61688A3E1FD693FA00783343 /* BottomCollectionViewCell.m */; };
 		616E60081F7DE3B600E35E9E /* WaveToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 616E60071F7DE3B600E35E9E /* WaveToolView.m */; };
 		6197BFE61F5D54CD003922F9 /* CreatQRImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6197BFE51F5D54CD003922F9 /* CreatQRImage.m */; };
 		6197BFE91F5D55DB003922F9 /* QRImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6197BFE81F5D55DB003922F9 /* QRImageViewController.m */; };
@@ -430,6 +434,8 @@
 		0CF49C181E8E362500073873 /* KWebViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWebViewViewController.m; sourceTree = "<group>"; };
 		2A92375A609DB6B5C5504E2E /* Pods_AllDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AllDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56C48497520584108F47C13B /* Pods-AllDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AllDemo/Pods-AllDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		610870B71FD783860051323A /* CenterSuspensionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CenterSuspensionView.h; sourceTree = "<group>"; };
+		610870B81FD783860051323A /* CenterSuspensionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CenterSuspensionView.m; sourceTree = "<group>"; };
 		610F11D21F7DE5AA00A39DC2 /* WaveToolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveToolViewController.h; sourceTree = "<group>"; };
 		610F11D31F7DE5AA00A39DC2 /* WaveToolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveToolViewController.m; sourceTree = "<group>"; };
 		611E11851F05FC4B009AF547 /* MoveCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoveCollectionViewController.h; sourceTree = "<group>"; };
@@ -438,6 +444,12 @@
 		61688A321FD647B700783343 /* TestBouncesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestBouncesViewController.m; sourceTree = "<group>"; };
 		61688A341FD64D3A00783343 /* LeftSuspensionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeftSuspensionView.h; sourceTree = "<group>"; };
 		61688A351FD64D3A00783343 /* LeftSuspensionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeftSuspensionView.m; sourceTree = "<group>"; };
+		61688A371FD6886E00783343 /* TopSuspensionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopSuspensionView.h; sourceTree = "<group>"; };
+		61688A381FD6886E00783343 /* TopSuspensionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopSuspensionView.m; sourceTree = "<group>"; };
+		61688A3A1FD692BD00783343 /* BottomSuspensionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BottomSuspensionView.h; sourceTree = "<group>"; };
+		61688A3B1FD692BD00783343 /* BottomSuspensionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BottomSuspensionView.m; sourceTree = "<group>"; };
+		61688A3D1FD693FA00783343 /* BottomCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BottomCollectionViewCell.h; sourceTree = "<group>"; };
+		61688A3E1FD693FA00783343 /* BottomCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BottomCollectionViewCell.m; sourceTree = "<group>"; };
 		616E60061F7DE3B600E35E9E /* WaveToolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveToolView.h; sourceTree = "<group>"; };
 		616E60071F7DE3B600E35E9E /* WaveToolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveToolView.m; sourceTree = "<group>"; };
 		6197BFE41F5D54CD003922F9 /* CreatQRImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatQRImage.h; sourceTree = "<group>"; };
@@ -1101,6 +1113,14 @@
 			children = (
 				61688A341FD64D3A00783343 /* LeftSuspensionView.h */,
 				61688A351FD64D3A00783343 /* LeftSuspensionView.m */,
+				61688A371FD6886E00783343 /* TopSuspensionView.h */,
+				61688A381FD6886E00783343 /* TopSuspensionView.m */,
+				61688A3A1FD692BD00783343 /* BottomSuspensionView.h */,
+				61688A3B1FD692BD00783343 /* BottomSuspensionView.m */,
+				61688A3D1FD693FA00783343 /* BottomCollectionViewCell.h */,
+				61688A3E1FD693FA00783343 /* BottomCollectionViewCell.m */,
+				610870B71FD783860051323A /* CenterSuspensionView.h */,
+				610870B81FD783860051323A /* CenterSuspensionView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1375,6 +1395,7 @@
 				0C14E82D1E499913009979B3 /* RecordingVideoController.m in Sources */,
 				0C7546E11E12673100681997 /* ELCAsset.m in Sources */,
 				0C43FB941E1CF51D0066FD26 /* ScrollDisplayViewController.m in Sources */,
+				61688A391FD6886E00783343 /* TopSuspensionView.m in Sources */,
 				0C1418291E447190007A1FCE /* BulletManager.m in Sources */,
 				0C6513381E2E10450054A61B /* HeaderCollectionViewCell.m in Sources */,
 				0C6513351E2E10220054A61B /* HeaderTableViewCell.m in Sources */,
@@ -1383,6 +1404,7 @@
 				0C7546C41E12602F00681997 /* MorePhotoViewController.m in Sources */,
 				0C7546B31E1254E400681997 /* HeaderView.m in Sources */,
 				0C6F0DA51ED284330035B157 /* CircleChartViewController.m in Sources */,
+				61688A3C1FD692BD00783343 /* BottomSuspensionView.m in Sources */,
 				0C75A8D11E13A10E007FC044 /* WaterCollectionViewLayout.m in Sources */,
 				0C7546B51E1254E400681997 /* RightTableViewCell.m in Sources */,
 				0C7546AC1E1254D900681997 /* CategoryModel.m in Sources */,
@@ -1414,6 +1436,7 @@
 				0C75469B1E123DFC00681997 /* MaskView.m in Sources */,
 				0C7546E61E12673100681997 /* ELCOverlayImageView.m in Sources */,
 				0C75A8921E1398EB007FC044 /* LodingViewController.m in Sources */,
+				610870B91FD783860051323A /* CenterSuspensionView.m in Sources */,
 				61F495FA1F8CA2C70021EEEB /* TestBlockViewController.m in Sources */,
 				0C65132C1E2DEE630054A61B /* DateView.m in Sources */,
 				0C75467F1E1201BA00681997 /* LoginViewController.m in Sources */,
@@ -1435,6 +1458,7 @@
 				0CE66F671EEA8CF900904EAF /* testCharts.swift in Sources */,
 				0C75468A1E1205C000681997 /* CreateViewFactory.m in Sources */,
 				0C7546C71E12655700681997 /* AddPhotoView.m in Sources */,
+				61688A3F1FD693FA00783343 /* BottomCollectionViewCell.m in Sources */,
 				61C70B691FA063B90059A7EE /* BlockChilckViewController.m in Sources */,
 				0C38C5191E1E1A34008975B0 /* TitleScrollView.m in Sources */,
 				61688A331FD647B700783343 /* TestBouncesViewController.m in Sources */,

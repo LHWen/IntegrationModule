@@ -8,10 +8,16 @@
 
 #import "TestBouncesViewController.h"
 #import "LeftSuspensionView.h"
+#import "TopSuspensionView.h"
+#import "BottomSuspensionView.h"
+#import "CenterSuspensionView.h"
 
 @interface TestBouncesViewController ()
 
 @property (nonatomic, strong) LeftSuspensionView *leftView;
+@property (nonatomic, strong) TopSuspensionView *topView;
+@property (nonatomic, strong) BottomSuspensionView *bottomView;
+@property (nonatomic, strong) CenterSuspensionView *centerView;
 
 @end
 
@@ -31,12 +37,13 @@
     
     if (!_leftView) {
         
+        __weak typeof(self) weakSelf = self;
         _leftView = [[LeftSuspensionView alloc] init];
         _leftView.frame = CGRectMake(0, 0, kSCREENWIDTH, kSCREENHEIGHT);
         _leftView.completeAnimate = ^(BOOL complete) {
             if (complete) {
-                [_leftView removeFromSuperview];
-                _leftView = nil;
+                [weakSelf.leftView removeFromSuperview];
+                weakSelf.leftView = nil;
             }
         };
         [[UIApplication sharedApplication].keyWindow addSubview:_leftView];
@@ -45,14 +52,54 @@
 
 - (void)clickTopBouncesButton:(UIButton *)sender {
     
+    if (!_topView) {
+        
+        __weak typeof(self) weakSelf = self;
+        _topView = [[TopSuspensionView alloc] initWithFrame:CGRectMake(0, 0, kSCREENWIDTH, kSCREENHEIGHT)];
+        _topView.completeAnimate = ^(BOOL complete) {
+            if (complete) {
+                [weakSelf.topView removeFromSuperview];
+                weakSelf.topView = nil;
+            }
+        };
+        [[UIApplication sharedApplication].keyWindow addSubview:_topView];
+    }
 }
 
 - (void)clickBottomBouncesButton:(UIButton *)sender {
     
+    if (!_bottomView) {
+        
+        __weak typeof(self) weakSelf = self;
+        
+        _bottomView = [[BottomSuspensionView alloc] initWithFrame:CGRectMake(0, 0, kSCREENWIDTH, kSCREENHEIGHT)];
+        _bottomView.completeAnimate = ^(BOOL complete) {
+            
+            if (complete) {
+                [weakSelf.bottomView removeFromSuperview];
+                weakSelf.bottomView = nil;
+            }
+        };
+        [[UIApplication sharedApplication].keyWindow addSubview:_bottomView];
+    }
 }
 
 - (void)clickCenterBouncesButton:(UIButton *)sender {
     
+    if (!_centerView) {
+        
+        __weak typeof(self) weakSelf = self;
+        
+        _centerView = [[CenterSuspensionView alloc] initWithFrame:CGRectMake(0, 0, kSCREENWIDTH, kSCREENHEIGHT)];
+        _centerView.completeAnimate = ^(BOOL complete) {
+            
+            if (complete) {
+                [weakSelf.centerView removeFromSuperview];
+                weakSelf.centerView = nil;
+            }
+        };
+        [[UIApplication sharedApplication].keyWindow addSubview:_centerView];
+    }
 }
 
 // 按钮视图

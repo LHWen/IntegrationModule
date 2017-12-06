@@ -149,7 +149,6 @@ static NSString *const collectionViewCell = @"SimpleCollectionViewCell";
     } completion:^(BOOL finished) {
         
     }];
-    
 }
 
 
