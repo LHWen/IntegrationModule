@@ -55,6 +55,8 @@
 
 #import "TestBouncesViewController.h"    // 测试弹框视图
 
+#import "CustomViewController.h"
+
 static NSString const *errorString = @"token已过期,请重新登录";
 
 @interface MainViewController () <UITableViewDataSource, UITableViewDelegate>
@@ -86,7 +88,7 @@ static NSString const *errorString = @"token已过期,请重新登录";
     self.navigationItem.title = @"主页";
     self.view.backgroundColor = [Utility colorWithHexString:@"#E1FFFF"];
     
-    _allDemoArray = @[@"倒计时", @"UIWindow实现遮挡层效果", @"表格折叠", @"表格关联", @"选择单张照片", @"选择多张照片", @"语音", @"加载视图", @"基础使用UIconllectionView", @"瀑布流", @"分页滑动", @"判断String中是否存在某个值", @"头部item", @"原生动画", @"弹幕", @"加载网页", @"相机", @"选择照片", @"录制视频", @"编辑视频", @"Image", @"KWebView", @"折线", @"柱状", @"圆形", @"饼图", @"散点(有问题的)", @"charts饼图", @"Charts柱状", @"Nina", @"测试经营情况", @"移动 CollectionView", @"系统分享", @"QRImage", @"wave波浪", @"block 中 block(看控制台的打印)", @"弹框"];
+    _allDemoArray = @[@"倒计时", @"UIWindow实现遮挡层效果", @"表格折叠", @"表格关联", @"选择单张照片", @"选择多张照片", @"语音", @"加载视图", @"基础使用UIconllectionView", @"瀑布流", @"分页滑动", @"判断String中是否存在某个值", @"头部item", @"原生动画", @"弹幕", @"加载网页", @"相机", @"选择照片", @"录制视频", @"编辑视频", @"Image", @"KWebView", @"折线", @"柱状", @"圆形", @"饼图", @"散点(有问题的)", @"charts饼图", @"Charts柱状", @"Nina", @"测试经营情况", @"移动 CollectionView", @"系统分享", @"QRImage", @"wave波浪", @"block 中 block(看控制台的打印)", @"弹框", @"自定义视频播放器"];
     
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -307,6 +309,11 @@ static NSString const *errorString = @"token已过期,请重新登录";
         }
         case 36:{ // TestBouncesViewController 弹框
             TestBouncesViewController *vc = [[TestBouncesViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+        case 37:{  // CustomViewController 自定义视频播放器
+            CustomViewController *vc = [[CustomViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }

@@ -167,6 +167,12 @@
 		23F3BB9F8C78C31A4C2B8499 /* Pods_AllDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A92375A609DB6B5C5504E2E /* Pods_AllDemo.framework */; };
 		610870B91FD783860051323A /* CenterSuspensionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 610870B81FD783860051323A /* CenterSuspensionView.m */; };
 		610F11D41F7DE5AA00A39DC2 /* WaveToolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 610F11D31F7DE5AA00A39DC2 /* WaveToolViewController.m */; };
+		6110C1991FFF162500BDDEF0 /* CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6110C1981FFF162500BDDEF0 /* CustomViewController.m */; };
+		6110C19C1FFF165A00BDDEF0 /* VideoItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6110C19B1FFF165A00BDDEF0 /* VideoItemModel.m */; };
+		6110C19F1FFF172400BDDEF0 /* CustomVideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6110C19E1FFF172400BDDEF0 /* CustomVideoTableViewCell.m */; };
+		6110C1A21FFF1DDE00BDDEF0 /* XLSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 6110C1A11FFF1DDE00BDDEF0 /* XLSlider.m */; };
+		6110C1A41FFF1E8B00BDDEF0 /* ImageResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6110C1A31FFF1E8B00BDDEF0 /* ImageResources.bundle */; };
+		6110C1A71FFF1ED800BDDEF0 /* CustomVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6110C1A61FFF1ED800BDDEF0 /* CustomVideoPlayer.m */; };
 		611E11871F05FC4B009AF547 /* MoveCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 611E11861F05FC4B009AF547 /* MoveCollectionViewController.m */; };
 		61688A331FD647B700783343 /* TestBouncesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61688A321FD647B700783343 /* TestBouncesViewController.m */; };
 		61688A361FD64D3A00783343 /* LeftSuspensionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 61688A351FD64D3A00783343 /* LeftSuspensionView.m */; };
@@ -438,6 +444,17 @@
 		610870B81FD783860051323A /* CenterSuspensionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CenterSuspensionView.m; sourceTree = "<group>"; };
 		610F11D21F7DE5AA00A39DC2 /* WaveToolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveToolViewController.h; sourceTree = "<group>"; };
 		610F11D31F7DE5AA00A39DC2 /* WaveToolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveToolViewController.m; sourceTree = "<group>"; };
+		6110C1971FFF162500BDDEF0 /* CustomViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomViewController.h; sourceTree = "<group>"; };
+		6110C1981FFF162500BDDEF0 /* CustomViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomViewController.m; sourceTree = "<group>"; };
+		6110C19A1FFF165A00BDDEF0 /* VideoItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoItemModel.h; sourceTree = "<group>"; };
+		6110C19B1FFF165A00BDDEF0 /* VideoItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoItemModel.m; sourceTree = "<group>"; };
+		6110C19D1FFF172400BDDEF0 /* CustomVideoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomVideoTableViewCell.h; sourceTree = "<group>"; };
+		6110C19E1FFF172400BDDEF0 /* CustomVideoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomVideoTableViewCell.m; sourceTree = "<group>"; };
+		6110C1A01FFF1DDE00BDDEF0 /* XLSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XLSlider.h; sourceTree = "<group>"; };
+		6110C1A11FFF1DDE00BDDEF0 /* XLSlider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XLSlider.m; sourceTree = "<group>"; };
+		6110C1A31FFF1E8B00BDDEF0 /* ImageResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ImageResources.bundle; sourceTree = "<group>"; };
+		6110C1A51FFF1ED800BDDEF0 /* CustomVideoPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomVideoPlayer.h; sourceTree = "<group>"; };
+		6110C1A61FFF1ED800BDDEF0 /* CustomVideoPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomVideoPlayer.m; sourceTree = "<group>"; };
 		611E11851F05FC4B009AF547 /* MoveCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoveCollectionViewController.h; sourceTree = "<group>"; };
 		611E11861F05FC4B009AF547 /* MoveCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoveCollectionViewController.m; sourceTree = "<group>"; };
 		61688A311FD647B700783343 /* TestBouncesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestBouncesViewController.h; sourceTree = "<group>"; };
@@ -594,6 +611,7 @@
 		0C69C8131E11123E00717ED6 /* AllDemo */ = {
 			isa = PBXGroup;
 			children = (
+				6110C1911FFF15FF00BDDEF0 /* CustomVideo */,
 				61688A2E1FD6479800783343 /* BouncesView */,
 				61F495EE1F8C9C420021EEEB /* BlockInBlock */,
 				616E60051F7DE38A00E35E9E /* WaveView */,
@@ -1090,6 +1108,64 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		6110C1911FFF15FF00BDDEF0 /* CustomVideo */ = {
+			isa = PBXGroup;
+			children = (
+				6110C1941FFF15FF00BDDEF0 /* Model */,
+				6110C1951FFF15FF00BDDEF0 /* View */,
+				6110C1921FFF15FF00BDDEF0 /* VideoPlayer */,
+				6110C1961FFF15FF00BDDEF0 /* ViewController */,
+			);
+			path = CustomVideo;
+			sourceTree = "<group>";
+		};
+		6110C1921FFF15FF00BDDEF0 /* VideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				6110C1931FFF15FF00BDDEF0 /* Slider */,
+				6110C1A31FFF1E8B00BDDEF0 /* ImageResources.bundle */,
+				6110C1A51FFF1ED800BDDEF0 /* CustomVideoPlayer.h */,
+				6110C1A61FFF1ED800BDDEF0 /* CustomVideoPlayer.m */,
+			);
+			path = VideoPlayer;
+			sourceTree = "<group>";
+		};
+		6110C1931FFF15FF00BDDEF0 /* Slider */ = {
+			isa = PBXGroup;
+			children = (
+				6110C1A01FFF1DDE00BDDEF0 /* XLSlider.h */,
+				6110C1A11FFF1DDE00BDDEF0 /* XLSlider.m */,
+			);
+			path = Slider;
+			sourceTree = "<group>";
+		};
+		6110C1941FFF15FF00BDDEF0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6110C19A1FFF165A00BDDEF0 /* VideoItemModel.h */,
+				6110C19B1FFF165A00BDDEF0 /* VideoItemModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6110C1951FFF15FF00BDDEF0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6110C19D1FFF172400BDDEF0 /* CustomVideoTableViewCell.h */,
+				6110C19E1FFF172400BDDEF0 /* CustomVideoTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6110C1961FFF15FF00BDDEF0 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6110C1971FFF162500BDDEF0 /* CustomViewController.h */,
+				6110C1981FFF162500BDDEF0 /* CustomViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		611E11841F05FBFD009AF547 /* MoveCollectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1298,6 +1374,7 @@
 				0C6513641E2E1D030054A61B /* Group Copy 2@2x.png in Resources */,
 				0CBB6EAC1E31B8A900E933DD /* icon_center_point@2x.png in Resources */,
 				0C69C8211E11123E00717ED6 /* Assets.xcassets in Resources */,
+				6110C1A41FFF1E8B00BDDEF0 /* ImageResources.bundle in Resources */,
 				0C65136C1E2E1D030054A61B /* Group Copy.png in Resources */,
 				0C6513711E2E1D030054A61B /* music@3x.png in Resources */,
 				0C7546E81E12673100681997 /* ELCAssetPicker.xib in Resources */,
@@ -1425,6 +1502,7 @@
 				61F495F71F8C9F2A0021EEEB /* TestBlockTool.m in Sources */,
 				616E60081F7DE3B600E35E9E /* WaveToolView.m in Sources */,
 				0C14E82A1E496871009979B3 /* ChooseImageController.m in Sources */,
+				6110C1991FFF162500BDDEF0 /* CustomViewController.m in Sources */,
 				0C7546981E123DD500681997 /* MaskViewController.m in Sources */,
 				0C6F0DA21ED284020035B157 /* BarChartViewController.m in Sources */,
 				0C710E3C1E4C08FE00D1F7A7 /* UIImage+ImageRotate.m in Sources */,
@@ -1442,7 +1520,9 @@
 				0C75467F1E1201BA00681997 /* LoginViewController.m in Sources */,
 				0C7546931E12152100681997 /* CountDownViewController.m in Sources */,
 				0C7546BF1E125C2F00681997 /* APiecePhotoViewController.m in Sources */,
+				6110C1A71FFF1ED800BDDEF0 /* CustomVideoPlayer.m in Sources */,
 				0CCA6C4F1EEE1AB500C92E86 /* BarChartsViewController.m in Sources */,
+				6110C19C1FFF165A00BDDEF0 /* VideoItemModel.m in Sources */,
 				0C75A8B91E13A10E007FC044 /* UIconllectionViewSimpleVC.m in Sources */,
 				0C75A88E1E13984F007FC044 /* HWActivityIndicator.m in Sources */,
 				0C7546E31E12673100681997 /* ELCAssetTablePicker.m in Sources */,
@@ -1468,6 +1548,7 @@
 				61AA58EA1F09E5F70045C776 /* SystemShareViewController.m in Sources */,
 				0CBB5C551E2F08A700A3F505 /* ShufflingCollectionViewCell.m in Sources */,
 				0CC75C531EE4EA4800AACA57 /* PieChartsViewController.m in Sources */,
+				6110C19F1FFF172400BDDEF0 /* CustomVideoTableViewCell.m in Sources */,
 				61F495F41F8C9E390021EEEB /* TestBlockOperation.m in Sources */,
 				0CF49C191E8E362500073873 /* KWebViewViewController.m in Sources */,
 				0CC7603F1EFB6085006C2C02 /* RightCollectionViewCell.m in Sources */,
@@ -1487,6 +1568,7 @@
 				0CC760361EFB5F0A006C2C02 /* OperatingViewController.m in Sources */,
 				0C7546E51E12673100681997 /* ELCImagePickerController.m in Sources */,
 				61F495F11F8C9C6B0021EEEB /* BaseOperation.m in Sources */,
+				6110C1A21FFF1DDE00BDDEF0 /* XLSlider.m in Sources */,
 				0C69C8161E11123E00717ED6 /* main.m in Sources */,
 				0C710E3D1E4C08FE00D1F7A7 /* UIImage+ImageScale.m in Sources */,
 			);
