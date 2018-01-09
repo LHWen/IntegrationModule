@@ -62,8 +62,8 @@ static NSString const *errorString = @"token已过期,请重新登录";
 @interface MainViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) NSArray *allDemoArray;
-
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) UIImageView *headerImgView;
 
 @end
 
@@ -72,10 +72,20 @@ static NSString const *errorString = @"token已过期,请重新登录";
 - (UITableView *)tableView {
     
     if (!_tableView) {
+        
+        UIView *headerView = [CreateViewFactory p_setViewBGColor:[UIColor orangeColor]];
+        headerView.frame = CGRectMake(0, 0, kSCREENWIDTH, 200.0f);
+        
+        _headerImgView = [CreateViewFactory p_setImageViewScaleAspectFillImageName:@"guilin"];
+        _headerImgView.frame = CGRectMake(0, 0, kSCREENWIDTH, 200.0f);
+        _headerImgView.center = headerView.center;
+        [headerView addSubview:_headerImgView];
+        
         _tableView = [[UITableView alloc] init];
         _tableView.backgroundColor = [Utility colorWithHexString:@"#E1FFFF"];
         _tableView.dataSource = self;
         _tableView.delegate = self;
+        _tableView.tableHeaderView = headerView;
         _tableView.tableFooterView = [[UIView alloc] init];
         [_tableView registerClass:[MainTableViewCell class] forCellReuseIdentifier:@"MainTableViewCell"];
     }
@@ -108,6 +118,21 @@ static NSString const *errorString = @"token已过期,请重新登录";
 //    NSLog(@"b4=>%@", [HWTimeStyleTool timeYearMonthDataStyle:@"1494914009"]);
 //    NSLog(@"b5=>%@", [HWTimeStyleTool timeYearMonthDataNoSecondeStyle:@"1494914009"]);
 //    NSLog(@"b6=>%@", [HWTimeStyleTool timeYearMonthDataNoTimeStyle:@"1494914009"]);
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    // 偏移的y值
+    CGFloat yOffset = scrollView.contentOffset.y;
+    
+    if (yOffset < 0) {
+        // 200 原有高度 ABS取绝对值
+        CGFloat totalOffset = 200 + ABS(yOffset);
+        // 比原图的比例
+        CGFloat f = totalOffset / 200;
+        //拉伸后的图片的frame应该是同比例缩放。
+        _headerImgView.frame = CGRectMake(- (kSCREENWIDTH * f - kSCREENWIDTH) / 2, yOffset, kSCREENWIDTH * f, totalOffset);
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
