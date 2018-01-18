@@ -36,7 +36,6 @@
     
     _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(20, 90, kSCREENWIDTH-40, kSCREENHEIGHT - 64 - 100)];
     [self.view addSubview:_imageView];
-
 }
 
 - (void)choosePhoto:(UIButton *)button {

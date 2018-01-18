@@ -28,6 +28,7 @@
 
 #import "CreateViewFactory.h"  // 对于 UILable And UIImageView 的快速创建
 #import "HWActivityIndicator.h"  // 网络请求上传时的动画
+#import "CalculateTextHeight.h"  // 文字高度计算
 
 #import "PNChart.h"        // 第三方图形
 
