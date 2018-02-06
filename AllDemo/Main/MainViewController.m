@@ -42,6 +42,7 @@
 
 #import "PieChartsViewController.h"  // charts pie
 #import "BarChartsViewController.h"  // charts bar
+#import "LineChartsViewController.h" // charts line
 
 #import "NinaViewController.h"       // 不好用
 
@@ -54,10 +55,12 @@
 #import "TestBlockViewController.h"      // block 中 回调 block
 
 #import "TestBouncesViewController.h"    // 测试弹框视图
+#import "DispatchSemaphoreViewController.h" // 测试异步线程 block 顺序返回
 
 #import "CustomViewController.h"
 
 #import "UpdateAlertTool.h"
+#import "ManualRotationViewController.h"   // 手动进行3D旋转
 
 static NSString const *errorString = @"token已过期,请重新登录";
 
@@ -100,7 +103,7 @@ static NSString const *errorString = @"token已过期,请重新登录";
     self.navigationItem.title = @"主页";
     self.view.backgroundColor = [Utility colorWithHexString:@"#E1FFFF"];
     
-    _allDemoArray = @[@"倒计时", @"UIWindow实现遮挡层效果", @"表格折叠", @"表格关联", @"选择单张照片", @"选择多张照片", @"语音", @"加载视图", @"基础使用UIconllectionView", @"瀑布流", @"分页滑动", @"判断String中是否存在某个值", @"头部item", @"原生动画", @"弹幕", @"加载网页", @"相机", @"选择照片", @"录制视频", @"编辑视频", @"Image", @"KWebView", @"折线", @"柱状", @"圆形", @"饼图", @"散点(有问题的)", @"charts饼图", @"Charts柱状", @"Nina", @"测试经营情况", @"移动 CollectionView", @"系统分享", @"QRImage", @"wave波浪", @"block 中 block(看控制台的打印)", @"弹框", @"自定义视频播放器", @"自定义更新Alert视图"];
+    _allDemoArray = @[@"倒计时", @"UIWindow实现遮挡层效果", @"表格折叠", @"表格关联", @"选择单张照片", @"选择多张照片", @"语音", @"加载视图", @"基础使用UIconllectionView", @"瀑布流", @"分页滑动", @"判断String中是否存在某个值", @"头部item", @"原生动画", @"弹幕", @"加载网页", @"相机", @"选择照片", @"录制视频", @"编辑视频", @"Image", @"KWebView", @"折线", @"柱状", @"圆形", @"饼图", @"散点(有问题的)", @"charts饼图", @"Charts柱状", @"charts折线", @"Nina", @"测试经营情况", @"移动 CollectionView", @"系统分享", @"QRImage", @"wave波浪", @"block 中 block(看控制台的打印)", @"弹框", @"自定义视频播放器", @"自定义更新Alert视图", @"dispatch_semaphore网络应用", @"手动3D旋转"];
     
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -298,56 +301,69 @@ static NSString const *errorString = @"token已过期,请重新登录";
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }
-        case 29:{
-            // Nina
+        case 29:{  // charts折线  LineChartsViewController
+            LineChartsViewController *vc = [[LineChartsViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+        case 30:{  // Nina
             NinaViewController *vc = [[NinaViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }
-        case 30:{ // 经营情况
+        case 31:{ // 经营情况
             OperatingViewController *vc = [[OperatingViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }
-        case 31:{ // 移动 collectionView
+        case 32:{ // 移动 collectionView
             MoveCollectionViewController *vc = [[MoveCollectionViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }
-        case 32: { // 系统分享
+        case 33: { // 系统分享
             SystemShareViewController *vc = [[SystemShareViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }
-        case 33: { // QRImage
+        case 34: { // QRImage
             QRImageViewController *vc = [[QRImageViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }
-        case 34:{ // #import "WaveToolViewController.h" 波浪
+        case 35:{ // #import "WaveToolViewController.h" 波浪
             WaveToolViewController *vc = [[WaveToolViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }
-        case 35:{ // TestBlockViewController  block
+        case 36:{ // TestBlockViewController  block
             TestBlockViewController *vc = [[TestBlockViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }
-        case 36:{ // TestBouncesViewController 弹框
+        case 37:{ // TestBouncesViewController 弹框
             TestBouncesViewController *vc = [[TestBouncesViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }
-        case 37:{  // CustomViewController 自定义视频播放器
+        case 38:{  // CustomViewController 自定义视频播放器
             CustomViewController *vc = [[CustomViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }
-        case 38:{ // 自定义更新视图的AlertView
+        case 39:{ // 自定义更新视图的AlertView
             NSString *string = @"1.意见反馈功能升级\n2.新增我的评价功能\n3.新增深圳包区管理员工单统计功能意见反馈功能升级";
             [UpdateAlertTool updateMessage:string updateAddress:@""];
             break;
+        }
+        case 40:{  // dispatch_semaphore网络应用
+            DispatchSemaphoreViewController *vc = [[DispatchSemaphoreViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+        case 41:{ // 手动3D旋转
+            ManualRotationViewController *vc = [[ManualRotationViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
         }
             
         default:
