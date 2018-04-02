@@ -174,6 +174,12 @@
 		6110C1A41FFF1E8B00BDDEF0 /* ImageResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6110C1A31FFF1E8B00BDDEF0 /* ImageResources.bundle */; };
 		6110C1A71FFF1ED800BDDEF0 /* CustomVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6110C1A61FFF1ED800BDDEF0 /* CustomVideoPlayer.m */; };
 		611E11871F05FC4B009AF547 /* MoveCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 611E11861F05FC4B009AF547 /* MoveCollectionViewController.m */; };
+		616386262041512F00D11056 /* QrCodeScanningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 616386252041512F00D11056 /* QrCodeScanningViewController.m */; };
+		616386282041558300D11056 /* noticeMusic.wav in Resources */ = {isa = PBXBuildFile; fileRef = 616386272041558300D11056 /* noticeMusic.wav */; };
+		6163862B204156D000D11056 /* QrCodeReaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6163862A204156D000D11056 /* QrCodeReaderView.m */; };
+		6163862F20415AF500D11056 /* scanLine@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6163862C20415AF500D11056 /* scanLine@3x.png */; };
+		6163863020415AF500D11056 /* scanscanBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6163862D20415AF500D11056 /* scanscanBg.png */; };
+		6163863120415AF500D11056 /* scanLine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6163862E20415AF500D11056 /* scanLine@2x.png */; };
 		61688A331FD647B700783343 /* TestBouncesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61688A321FD647B700783343 /* TestBouncesViewController.m */; };
 		61688A361FD64D3A00783343 /* LeftSuspensionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 61688A351FD64D3A00783343 /* LeftSuspensionView.m */; };
 		61688A391FD6886E00783343 /* TopSuspensionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 61688A381FD6886E00783343 /* TopSuspensionView.m */; };
@@ -190,6 +196,9 @@
 		61AA58ED1F09E6C10045C776 /* SystemShareHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 61AA58EC1F09E6C10045C776 /* SystemShareHelper.m */; };
 		61C70B691FA063B90059A7EE /* BlockChilckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C70B681FA063B90059A7EE /* BlockChilckViewController.m */; };
 		61DDAC3820200ADB009C9F1F /* DispatchSemaphoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61DDAC3720200ADB009C9F1F /* DispatchSemaphoreViewController.m */; };
+		61ECCB8F20720D8B00354C65 /* ShareTest.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 61ECCB8E20720D8B00354C65 /* ShareTest.rtf */; };
+		61ECCB9120720F8300354C65 /* TestPDF.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 61ECCB9020720F8300354C65 /* TestPDF.pdf */; };
+		61ECCB932072105500354C65 /* Testtxt.txt in Resources */ = {isa = PBXBuildFile; fileRef = 61ECCB922072105500354C65 /* Testtxt.txt */; };
 		61F495F11F8C9C6B0021EEEB /* BaseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 61F495F01F8C9C6B0021EEEB /* BaseOperation.m */; };
 		61F495F41F8C9E390021EEEB /* TestBlockOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 61F495F31F8C9E390021EEEB /* TestBlockOperation.m */; };
 		61F495F71F8C9F2A0021EEEB /* TestBlockTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 61F495F61F8C9F2A0021EEEB /* TestBlockTool.m */; };
@@ -462,6 +471,14 @@
 		6110C1A61FFF1ED800BDDEF0 /* CustomVideoPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomVideoPlayer.m; sourceTree = "<group>"; };
 		611E11851F05FC4B009AF547 /* MoveCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoveCollectionViewController.h; sourceTree = "<group>"; };
 		611E11861F05FC4B009AF547 /* MoveCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoveCollectionViewController.m; sourceTree = "<group>"; };
+		616386242041512F00D11056 /* QrCodeScanningViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QrCodeScanningViewController.h; sourceTree = "<group>"; };
+		616386252041512F00D11056 /* QrCodeScanningViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QrCodeScanningViewController.m; sourceTree = "<group>"; };
+		616386272041558300D11056 /* noticeMusic.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = noticeMusic.wav; sourceTree = "<group>"; };
+		61638629204156D000D11056 /* QrCodeReaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QrCodeReaderView.h; sourceTree = "<group>"; };
+		6163862A204156D000D11056 /* QrCodeReaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QrCodeReaderView.m; sourceTree = "<group>"; };
+		6163862C20415AF500D11056 /* scanLine@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scanLine@3x.png"; sourceTree = "<group>"; };
+		6163862D20415AF500D11056 /* scanscanBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scanscanBg.png; sourceTree = "<group>"; };
+		6163862E20415AF500D11056 /* scanLine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scanLine@2x.png"; sourceTree = "<group>"; };
 		61688A311FD647B700783343 /* TestBouncesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestBouncesViewController.h; sourceTree = "<group>"; };
 		61688A321FD647B700783343 /* TestBouncesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestBouncesViewController.m; sourceTree = "<group>"; };
 		61688A341FD64D3A00783343 /* LeftSuspensionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeftSuspensionView.h; sourceTree = "<group>"; };
@@ -494,6 +511,11 @@
 		61C70B681FA063B90059A7EE /* BlockChilckViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockChilckViewController.m; sourceTree = "<group>"; };
 		61DDAC3620200ADB009C9F1F /* DispatchSemaphoreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DispatchSemaphoreViewController.h; sourceTree = "<group>"; };
 		61DDAC3720200ADB009C9F1F /* DispatchSemaphoreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DispatchSemaphoreViewController.m; sourceTree = "<group>"; };
+		61ECCB8E20720D8B00354C65 /* ShareTest.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = ShareTest.rtf; sourceTree = "<group>"; };
+		61ECCB9020720F8300354C65 /* TestPDF.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = TestPDF.pdf; sourceTree = "<group>"; };
+		61ECCB922072105500354C65 /* Testtxt.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Testtxt.txt; sourceTree = "<group>"; };
+		61ECCB942072118C00354C65 /* Testword.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = Testword.docx; sourceTree = "<group>"; };
+		61ECCB952072118C00354C65 /* TestExcel.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = TestExcel.xlsx; sourceTree = "<group>"; };
 		61F495EF1F8C9C6B0021EEEB /* BaseOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseOperation.h; sourceTree = "<group>"; };
 		61F495F01F8C9C6B0021EEEB /* BaseOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseOperation.m; sourceTree = "<group>"; };
 		61F495F21F8C9E390021EEEB /* TestBlockOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestBlockOperation.h; sourceTree = "<group>"; };
@@ -626,6 +648,7 @@
 		0C69C8131E11123E00717ED6 /* AllDemo */ = {
 			isa = PBXGroup;
 			children = (
+				616386232041511900D11056 /* ScaningQrCode */,
 				6185111B20219AD700C3A6FC /* 3D */,
 				61DDAC3520200ACA009C9F1F /* DispatchSemaphore */,
 				6110C1911FFF15FF00BDDEF0 /* CustomVideo */,
@@ -1198,6 +1221,21 @@
 			path = MoveCollectionView;
 			sourceTree = "<group>";
 		};
+		616386232041511900D11056 /* ScaningQrCode */ = {
+			isa = PBXGroup;
+			children = (
+				6163862E20415AF500D11056 /* scanLine@2x.png */,
+				6163862C20415AF500D11056 /* scanLine@3x.png */,
+				6163862D20415AF500D11056 /* scanscanBg.png */,
+				616386272041558300D11056 /* noticeMusic.wav */,
+				616386242041512F00D11056 /* QrCodeScanningViewController.h */,
+				616386252041512F00D11056 /* QrCodeScanningViewController.m */,
+				61638629204156D000D11056 /* QrCodeReaderView.h */,
+				6163862A204156D000D11056 /* QrCodeReaderView.m */,
+			);
+			path = ScaningQrCode;
+			sourceTree = "<group>";
+		};
 		61688A2E1FD6479800783343 /* BouncesView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1275,10 +1313,15 @@
 		61AA58E71F09E5C90045C776 /* SystemShare */ = {
 			isa = PBXGroup;
 			children = (
+				61ECCB952072118C00354C65 /* TestExcel.xlsx */,
+				61ECCB942072118C00354C65 /* Testword.docx */,
+				61ECCB922072105500354C65 /* Testtxt.txt */,
+				61ECCB9020720F8300354C65 /* TestPDF.pdf */,
 				61AA58E81F09E5F70045C776 /* SystemShareViewController.h */,
 				61AA58E91F09E5F70045C776 /* SystemShareViewController.m */,
 				61AA58EB1F09E6C10045C776 /* SystemShareHelper.h */,
 				61AA58EC1F09E6C10045C776 /* SystemShareHelper.m */,
+				61ECCB8E20720D8B00354C65 /* ShareTest.rtf */,
 			);
 			path = SystemShare;
 			sourceTree = "<group>";
@@ -1386,7 +1429,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C65135A1E2E1D030054A61B /* 美术.png in Resources */,
+				61ECCB932072105500354C65 /* Testtxt.txt in Resources */,
 				0C6513781E2E1D030054A61B /* preform.png in Resources */,
+				6163862F20415AF500D11056 /* scanLine@3x.png in Resources */,
 				0C6513761E2E1D030054A61B /* pantting@2x.png in Resources */,
 				0C6513691E2E1D030054A61B /* Group Copy 5.png in Resources */,
 				0C75A8C91E13A10E007FC044 /* 4.jpg in Resources */,
@@ -1399,6 +1444,7 @@
 				0C6513631E2E1D030054A61B /* Group Copy 2.png in Resources */,
 				0C65135C1E2E1D030054A61B /* 美术@3x.png in Resources */,
 				0C65136B1E2E1D030054A61B /* Group Copy 5@3x.png in Resources */,
+				616386282041558300D11056 /* noticeMusic.wav in Resources */,
 				0C75A8BE1E13A10E007FC044 /* 11.jpg in Resources */,
 				0C75A8BC1E13A10E007FC044 /* 1.jpg in Resources */,
 				0C6513611E2E1D030054A61B /* dancing @2x.png in Resources */,
@@ -1406,8 +1452,10 @@
 				0C75A8BF1E13A10E007FC044 /* 12.jpg in Resources */,
 				0CBB5C5E1E2F0E9000A3F505 /* banner3.png in Resources */,
 				0C6513621E2E1D030054A61B /* dancing @3x.png in Resources */,
+				6163863120415AF500D11056 /* scanLine@2x.png in Resources */,
 				0C710E391E4C08FE00D1F7A7 /* radial_tracers.jpg in Resources */,
 				0C7546EA1E12673100681997 /* Overlay.png in Resources */,
+				61ECCB8F20720D8B00354C65 /* ShareTest.rtf in Resources */,
 				0CBB6EAB1E31B8A900E933DD /* icon_center_point.png in Resources */,
 				0C75A8C81E13A10E007FC044 /* 3.jpg in Resources */,
 				0C7546E71E12673100681997 /* ELCAlbumPickerController.xib in Resources */,
@@ -1437,6 +1485,8 @@
 				0C6513651E2E1D030054A61B /* Group Copy 2@3x.png in Resources */,
 				0C6513721E2E1D030054A61B /* musical.png in Resources */,
 				0C75A8CD1E13A10E007FC044 /* 8.jpg in Resources */,
+				6163863020415AF500D11056 /* scanscanBg.png in Resources */,
+				61ECCB9120720F8300354C65 /* TestPDF.pdf in Resources */,
 				0C75A8C61E13A10E007FC044 /* 19.jpg in Resources */,
 				0C710E371E4C08FE00D1F7A7 /* iconPy.jpg in Resources */,
 				0C6513741E2E1D030054A61B /* musical@3x.png in Resources */,
@@ -1599,8 +1649,10 @@
 				6197BFE61F5D54CD003922F9 /* CreatQRImage.m in Sources */,
 				61AA58EA1F09E5F70045C776 /* SystemShareViewController.m in Sources */,
 				0CBB5C551E2F08A700A3F505 /* ShufflingCollectionViewCell.m in Sources */,
+				6163862B204156D000D11056 /* QrCodeReaderView.m in Sources */,
 				0CC75C531EE4EA4800AACA57 /* PieChartsViewController.m in Sources */,
 				6110C19F1FFF172400BDDEF0 /* CustomVideoTableViewCell.m in Sources */,
+				616386262041512F00D11056 /* QrCodeScanningViewController.m in Sources */,
 				61F495F41F8C9E390021EEEB /* TestBlockOperation.m in Sources */,
 				0CF49C191E8E362500073873 /* KWebViewViewController.m in Sources */,
 				0CC7603F1EFB6085006C2C02 /* RightCollectionViewCell.m in Sources */,

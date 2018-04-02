@@ -38,8 +38,17 @@ static SystemShareHelper * shareHelper;
 
     //分享对象  判断分享类型
     if(type == SystemShareHelperTypeOther) {
-        UIActivityViewController * activityCtl = [[UIActivityViewController alloc]initWithActivityItems:items applicationActivities:nil];
+        UIActivityViewController * activityCtl = [[UIActivityViewController alloc] initWithActivityItems:items applicationActivities:nil];
+        // 不出现活动项目
+        activityCtl.excludedActivityTypes = @[UIActivityTypePrint, UIActivityTypeCopyToPasteboard,UIActivityTypeAssignToContact,UIActivityTypeSaveToCameraRoll];
         [controller presentViewController:activityCtl animated:YES completion:nil];
+        activityCtl.completionWithItemsHandler = ^(UIActivityType  _Nullable activityType, BOOL completed, NSArray * _Nullable returnedItems, NSError * _Nullable activityError){
+            if (completed) {
+                NSLog(@"分享成功");
+            }else {
+                NSLog(@"分享失败");
+            }
+        };
         return YES;
     }
     

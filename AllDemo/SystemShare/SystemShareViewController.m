@@ -77,8 +77,16 @@
 }
 
 - (void)otherShare:(UIButton *)sender {
+//    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"TestPDF" ofType:@"pdf"];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"Testtxt" ofType:@"txt"];
     
-    [SystemShareHelper shareWithType:SystemShareHelperTypeOther andController:self andItems:_shareImageArr];
+//    word docx Excel xlsx 文件无法使用地址分享
+//    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"TestExcel" ofType:@"xlsx"];
+    
+    NSURL *fileURL = [NSURL fileURLWithPath:filePath];
+    NSArray *fileArr = @[fileURL];
+    
+    [SystemShareHelper shareWithType:SystemShareHelperTypeOther andController:self andItems:fileArr];
 }
 
 - (void)didReceiveMemoryWarning {

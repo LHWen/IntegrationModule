@@ -54,9 +54,9 @@
     ChartXAxis *xAxis = self.lineChartView.xAxis;
     xAxis.labelFont = [UIFont systemFontOfSize:9.0f];
     xAxis.labelTextColor = UIColor.orangeColor;
-    xAxis.axisLineWidth = 0;//设置X轴线宽
-    xAxis.labelPosition = XAxisLabelPositionBottom;//X轴的显示位置，默认是显示在上面的
-    xAxis.drawGridLinesEnabled = NO; //不绘制网格线
+    xAxis.axisLineWidth = 0;    // 设置X轴线宽
+    xAxis.labelPosition = XAxisLabelPositionBottom;     // X轴的显示位置，默认是显示在上面的
+    xAxis.drawGridLinesEnabled = NO;    // 不绘制网格线
     xAxis.drawAxisLineEnabled = NO;
     NSNumberFormatter *xAxisFormatter = [[NSNumberFormatter alloc] init];
     xAxisFormatter.positiveSuffix = @" 月";
@@ -89,25 +89,25 @@
 
 - (LineChartData *)setLineData {
     
-    int xVals_count = 12;//X轴上要显示多少条数据
-    double maxYVal = 100;//Y轴的最大值
+    int xVals_count = 18;//X轴上要显示多少条数据
+    double maxYVal = 120;//Y轴的最大值
     
     //对应Y轴上面需要显示的数据
     NSMutableArray *yVals1 = [[NSMutableArray alloc] init];
     NSMutableArray *yVals2 = [[NSMutableArray alloc] init];
     
-    for (int i = 0; i < xVals_count; i++) {
+    for (int i = 1; i <= xVals_count; i++) {
         double mult = maxYVal + 1;
         double val = (double)(arc4random_uniform(mult));
-        ChartDataEntry *entry = [[ChartDataEntry alloc] initWithX:i+1 y:val];
+        ChartDataEntry *entry = [[ChartDataEntry alloc] initWithX:i y:val];
         
         [yVals1 addObject:entry];
     }
     
-    for (int i = 0; i < xVals_count; i++) {
+    for (int i = 1; i <= xVals_count; i++) {
         double mult = maxYVal + 1;
         double val = (double)(arc4random_uniform(mult));
-        ChartDataEntry *entry = [[ChartDataEntry alloc] initWithX:i+1 y:val];
+        ChartDataEntry *entry = [[ChartDataEntry alloc] initWithX:i y:val];
         
         [yVals2 addObject:entry];
     }
@@ -116,23 +116,7 @@
     LineChartDataSet *set1 = [[LineChartDataSet alloc] initWithValues:yVals1];
     LineChartDataSet *set2 = [[LineChartDataSet alloc] initWithValues:yVals2];
     
-    set1.axisDependency = AxisDependencyLeft;
-    [set1 setColor:[UIColor colorWithRed:51/255.f green:181/255.f blue:229/255.f alpha:1.f]];
-    [set1 setCircleColor:UIColor.whiteColor];
-    set1.lineWidth = 2.0;
-    set1.circleRadius = 3.0;
-    set1.fillAlpha = 65/255.0;
-    set1.fillColor = [UIColor colorWithRed:51/255.f green:181/255.f blue:229/255.f alpha:1.f];
-    set1.highlightColor = [UIColor colorWithRed:244/255.f green:117/255.f blue:117/255.f alpha:1.f];
-    set1.drawCircleHoleEnabled = NO;
-    
-//    [set1 setColors:ChartColorTemplates.material];
-    
-    set1.drawValuesEnabled = YES; // 是否在柱形图上面显示数值
-    set1.highlightEnabled = YES; // 点击选中柱形图是否有高亮效果，（双击空白处取消选中）
-    
-    set1.drawIconsEnabled = NO;
-    
+    [self lineChartDataSet:set1 lineColor:[UIColor colorWithRed:51/255.f green:181/255.f blue:229/255.f alpha:1.f]];
     [self lineChartDataSet:set2 lineColor:[UIColor orangeColor]];
     
     NSMutableArray *dataSets = [[NSMutableArray alloc] init];
@@ -156,17 +140,12 @@
     set.fillColor = [UIColor colorWithRed:51/255.f green:181/255.f blue:229/255.f alpha:1.f];
     set.highlightColor = [UIColor colorWithRed:244/255.f green:117/255.f blue:117/255.f alpha:1.f];
     set.drawCircleHoleEnabled = NO;
-    
-    //    [set1 setColors:ChartColorTemplates.material];
-    
     set.drawValuesEnabled = YES; // 是否在柱形图上面显示数值
     set.highlightEnabled = YES; // 点击选中柱形图是否有高亮效果，（双击空白处取消选中）
-    
     set.drawIconsEnabled = NO;
 }
 
 #pragma mark - ChartViewDelegate
-
 - (void)chartValueSelected:(ChartViewBase * __nonnull)chartView entry:(ChartDataEntry * __nonnull)entry highlight:(ChartHighlight * __nonnull)highlight {
     NSLog(@"chartValueSelected");
     
