@@ -60,7 +60,7 @@ static NSString *contentTitleColorStr = @"666666"; // 正文颜色较深
     
     //设置代理 在主线程里刷新
     [output setMetadataObjectsDelegate:self queue:dispatch_get_main_queue()];
-    // 位置做标 扫描区域 这个有问题
+    // 位置做标 扫描区域
     output.rectOfInterest = [self rectOfInterestByScanViewRect:CGRectMake((Width - SWidth)/2, kSpringY, SWidth, SWidth)];
     
     //初始化链接对象
@@ -247,8 +247,12 @@ static NSString *contentTitleColorStr = @"666666"; // 正文颜色较深
     CGFloat width = CGRectGetWidth(self.frame);
     CGFloat height = CGRectGetHeight(self.frame);
     
-    CGFloat x = (height - CGRectGetHeight(rect))/ 2 / height;
-    CGFloat y = (width - CGRectGetWidth(rect))/ 2 /width;
+//    CGFloat x = (height - CGRectGetHeight(rect)) / 2 / height;
+//    CGFloat y = (width - CGRectGetWidth(rect)) / 2 /width;
+    
+    CGPoint o = rect.origin;
+    CGFloat x = o.y / height;
+    CGFloat y = o.x / width;
     
     CGFloat w = CGRectGetHeight(rect) / height;
     CGFloat h = CGRectGetWidth(rect) / width;
