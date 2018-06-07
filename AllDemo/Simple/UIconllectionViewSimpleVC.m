@@ -60,8 +60,8 @@ static NSString *const collectionViewCell = @"SimpleCollectionViewCell";
     return self.dataArray.count;
 }
 
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
     SimpleCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:collectionViewCell forIndexPath:indexPath];
     cell.backgroundColor = [UIColor greenColor];
     cell.layer.borderWidth = 0.5;

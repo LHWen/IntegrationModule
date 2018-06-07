@@ -174,6 +174,8 @@
 		6110C1A41FFF1E8B00BDDEF0 /* ImageResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6110C1A31FFF1E8B00BDDEF0 /* ImageResources.bundle */; };
 		6110C1A71FFF1ED800BDDEF0 /* CustomVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6110C1A61FFF1ED800BDDEF0 /* CustomVideoPlayer.m */; };
 		611E11871F05FC4B009AF547 /* MoveCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 611E11861F05FC4B009AF547 /* MoveCollectionViewController.m */; };
+		615FB48020C91B1100C86C44 /* MakeSocketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 615FB47F20C91B1100C86C44 /* MakeSocketViewController.m */; };
+		615FB48320C920E800C86C44 /* SocketUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 615FB48220C920E800C86C44 /* SocketUtility.m */; };
 		616386262041512F00D11056 /* QrCodeScanningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 616386252041512F00D11056 /* QrCodeScanningViewController.m */; };
 		616386282041558300D11056 /* noticeMusic.wav in Resources */ = {isa = PBXBuildFile; fileRef = 616386272041558300D11056 /* noticeMusic.wav */; };
 		6163862B204156D000D11056 /* QrCodeReaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6163862A204156D000D11056 /* QrCodeReaderView.m */; };
@@ -471,6 +473,10 @@
 		6110C1A61FFF1ED800BDDEF0 /* CustomVideoPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomVideoPlayer.m; sourceTree = "<group>"; };
 		611E11851F05FC4B009AF547 /* MoveCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoveCollectionViewController.h; sourceTree = "<group>"; };
 		611E11861F05FC4B009AF547 /* MoveCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoveCollectionViewController.m; sourceTree = "<group>"; };
+		615FB47E20C91B1100C86C44 /* MakeSocketViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MakeSocketViewController.h; sourceTree = "<group>"; };
+		615FB47F20C91B1100C86C44 /* MakeSocketViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MakeSocketViewController.m; sourceTree = "<group>"; };
+		615FB48120C920E800C86C44 /* SocketUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SocketUtility.h; sourceTree = "<group>"; };
+		615FB48220C920E800C86C44 /* SocketUtility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SocketUtility.m; sourceTree = "<group>"; };
 		616386242041512F00D11056 /* QrCodeScanningViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QrCodeScanningViewController.h; sourceTree = "<group>"; };
 		616386252041512F00D11056 /* QrCodeScanningViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QrCodeScanningViewController.m; sourceTree = "<group>"; };
 		616386272041558300D11056 /* noticeMusic.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = noticeMusic.wav; sourceTree = "<group>"; };
@@ -648,6 +654,7 @@
 		0C69C8131E11123E00717ED6 /* AllDemo */ = {
 			isa = PBXGroup;
 			children = (
+				615FB47D20C91AD200C86C44 /* MakeSocketRocket */,
 				616386232041511900D11056 /* ScaningQrCode */,
 				6185111B20219AD700C3A6FC /* 3D */,
 				61DDAC3520200ACA009C9F1F /* DispatchSemaphore */,
@@ -1221,6 +1228,17 @@
 			path = MoveCollectionView;
 			sourceTree = "<group>";
 		};
+		615FB47D20C91AD200C86C44 /* MakeSocketRocket */ = {
+			isa = PBXGroup;
+			children = (
+				615FB47E20C91B1100C86C44 /* MakeSocketViewController.h */,
+				615FB47F20C91B1100C86C44 /* MakeSocketViewController.m */,
+				615FB48120C920E800C86C44 /* SocketUtility.h */,
+				615FB48220C920E800C86C44 /* SocketUtility.m */,
+			);
+			path = MakeSocketRocket;
+			sourceTree = "<group>";
+		};
 		616386232041511900D11056 /* ScaningQrCode */ = {
 			isa = PBXGroup;
 			children = (
@@ -1577,6 +1595,7 @@
 				0C6513351E2E10220054A61B /* HeaderTableViewCell.m in Sources */,
 				0C710E3A1E4C08FE00D1F7A7 /* UIImage+ImageCircle.m in Sources */,
 				0C6F0DAB1ED286290035B157 /* ScatterChartViewController.m in Sources */,
+				615FB48020C91B1100C86C44 /* MakeSocketViewController.m in Sources */,
 				0C7546C41E12602F00681997 /* MorePhotoViewController.m in Sources */,
 				0C7546B31E1254E400681997 /* HeaderView.m in Sources */,
 				0C6F0DA51ED284330035B157 /* CircleChartViewController.m in Sources */,
@@ -1658,6 +1677,7 @@
 				0CC7603F1EFB6085006C2C02 /* RightCollectionViewCell.m in Sources */,
 				0C75A8D21E13A10E007FC044 /* WaterViewController.m in Sources */,
 				0C7546E41E12673100681997 /* ELCConsole.m in Sources */,
+				615FB48320C920E800C86C44 /* SocketUtility.m in Sources */,
 				0C6F0DA81ED284F70035B157 /* PieChartViewController.m in Sources */,
 				0C75467B1E1200E100681997 /* MainViewController.m in Sources */,
 				0C7546B41E1254E400681997 /* LeftTableViewCell.m in Sources */,

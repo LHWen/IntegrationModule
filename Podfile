@@ -7,6 +7,7 @@ pod 'Masonry'
 pod 'PNChart'
 pod 'NinaPagerView'
 pod 'Charts'
+pod 'SocketRocket'
 use_frameworks!
 
 end
