@@ -98,6 +98,13 @@
         NSLog(@"%ld row switch is off", _indexRow);
     }
     
+    // 添加3DTouch 轻震动效果
+    if (@available(iOS 10.0, *)) {
+        UIImpactFeedbackGenerator *generator = [[UIImpactFeedbackGenerator alloc] initWithStyle:UIImpactFeedbackStyleLight];
+        [generator prepare];
+        [generator impactOccurred];
+    }
+    
     self.completion(_indexRow, _rSwitch.on);
 }
 
