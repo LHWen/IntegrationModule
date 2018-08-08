@@ -59,6 +59,7 @@ static NSString *const kSwitchCell = @"SwitchTableViewCell";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     SwitchTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kSwitchCell];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     SwitchModel *model = _dataArray[indexPath.row];
     

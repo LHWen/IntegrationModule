@@ -70,9 +70,13 @@
     if (!_rSwitch) {
         _rSwitch = [[UISwitch alloc] init];
         // 开关color
-        _rSwitch.tintColor = [UIColor grayColor]; // 关闭状态下color
+        _rSwitch.tintColor = [UIColor lightGrayColor]; // 关闭状态下边沿color
+        // 背景颜色 关闭状态下内容颜色跟背景色一致 若设置背景色圆角显示需要自己切
+        _rSwitch.backgroundColor = [UIColor whiteColor];
+        _rSwitch.layer.cornerRadius = _rSwitch.bounds.size.height/2.0f;
+        _rSwitch.layer.masksToBounds = YES;
         _rSwitch.onTintColor = [UIColor greenColor]; // 开启状态下color
-        _rSwitch.thumbTintColor = [UIColor orangeColor]; // 滑块color
+        _rSwitch.thumbTintColor = [UIColor whiteColor]; // 滑块color
         // size 放缩
         _rSwitch.transform = CGAffineTransformMakeScale(1.0, 1.0);
         _rSwitch.on = YES;
