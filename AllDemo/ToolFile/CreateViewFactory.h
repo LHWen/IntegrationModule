@@ -169,5 +169,7 @@
  */
 + (UIImageView *)p_setImageViewScaleAspectFillImageName:(NSString *)imageName;
 
++ (UITableView *)p_initWithFrame:(CGRect)frame style:(UITableViewStyle)style;
+
 
 @end

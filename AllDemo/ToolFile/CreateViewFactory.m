@@ -172,4 +172,23 @@
     return imageView;
 }
 
++ (UITableView *)p_initWithFrame:(CGRect)frame style:(UITableViewStyle)style {
+    
+    UITableView *tableView = [[UITableView alloc] initWithFrame:frame style:style];
+    tableView.backgroundColor = [UIColor whiteColor];
+    tableView.estimatedRowHeight = 0;
+    tableView.estimatedSectionFooterHeight = 0;
+    tableView.estimatedSectionHeaderHeight = 0;
+    
+    if (@available(iOS 11.0, *)) {
+        tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        
+        if ([UIScreen mainScreen].bounds.size.height == 812.0) { // iPhone X
+            tableView.contentInset = UIEdgeInsetsMake(0, 0, 34.0f, 0);
+        }
+    }
+    
+    return tableView;
+}
+
 @end

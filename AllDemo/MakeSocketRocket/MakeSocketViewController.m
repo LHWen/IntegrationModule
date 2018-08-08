@@ -38,7 +38,6 @@
     [endBtn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
     [endBtn addTarget:self action:@selector(endScoket) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:endBtn];
-    
 }
 
 // 开启socket通信
