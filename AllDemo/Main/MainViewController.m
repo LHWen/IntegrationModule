@@ -65,6 +65,7 @@
 
 #import "MakeSocketViewController.h"       // socket 通信
 #import "SwitchViewController.h"      // 开关
+#import "BezierPathViewController.h"  // 贝塞尔曲线
 
 static NSString const *errorString = @"token已过期,请重新登录";
 
@@ -107,7 +108,7 @@ static NSString const *errorString = @"token已过期,请重新登录";
     self.navigationItem.title = @"主页";
     self.view.backgroundColor = [Utility colorWithHexString:@"#E1FFFF"];
     
-    _allDemoArray = @[@"倒计时", @"UIWindow实现遮挡层效果", @"表格折叠", @"表格关联", @"选择单张照片", @"选择多张照片", @"语音", @"加载视图", @"基础使用UIconllectionView", @"瀑布流", @"分页滑动", @"判断String中是否存在某个值", @"头部item", @"原生动画", @"弹幕", @"加载网页", @"相机", @"选择照片", @"录制视频", @"编辑视频", @"Image", @"KWebView", @"折线", @"柱状", @"圆形", @"饼图", @"散点(有问题的)", @"charts饼图", @"Charts柱状", @"charts折线", @"Nina", @"测试经营情况", @"移动 CollectionView", @"系统分享", @"QRImage", @"wave波浪", @"block 中 block(看控制台的打印)", @"弹框", @"自定义视频播放器", @"自定义更新Alert视图", @"dispatch_semaphore网络应用", @"手动3D旋转", @"二维码扫描", @"socket通信", @"UISwitch"];
+    _allDemoArray = @[@"倒计时", @"UIWindow实现遮挡层效果", @"表格折叠", @"表格关联", @"选择单张照片", @"选择多张照片", @"语音", @"加载视图", @"基础使用UIconllectionView", @"瀑布流", @"分页滑动", @"判断String中是否存在某个值", @"头部item", @"原生动画", @"弹幕", @"加载网页", @"相机", @"选择照片", @"录制视频", @"编辑视频", @"Image", @"KWebView", @"折线", @"柱状", @"圆形", @"饼图", @"散点(有问题的)", @"charts饼图", @"Charts柱状", @"charts折线", @"Nina", @"测试经营情况", @"移动 CollectionView", @"系统分享", @"QRImage", @"wave波浪", @"block 中 block(看控制台的打印)", @"弹框", @"自定义视频播放器", @"自定义更新Alert视图", @"dispatch_semaphore网络应用", @"手动3D旋转", @"二维码扫描", @"socket通信", @"UISwitch", @"BezierPath"];
     
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -382,6 +383,11 @@ static NSString const *errorString = @"token已过期,请重新登录";
         }
         case 44:{ // UISwitch
             SwitchViewController *vc = [[SwitchViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+        case 45: { // bezier path
+            BezierPathViewController *vc = [[BezierPathViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }

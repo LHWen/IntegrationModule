@@ -173,6 +173,10 @@
 		6110C1A21FFF1DDE00BDDEF0 /* XLSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 6110C1A11FFF1DDE00BDDEF0 /* XLSlider.m */; };
 		6110C1A41FFF1E8B00BDDEF0 /* ImageResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6110C1A31FFF1E8B00BDDEF0 /* ImageResources.bundle */; };
 		6110C1A71FFF1ED800BDDEF0 /* CustomVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6110C1A61FFF1ED800BDDEF0 /* CustomVideoPlayer.m */; };
+		6112BB11214B4F4200792372 /* BMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6112BB10214B4F4200792372 /* BMessageView.m */; };
+		6112BB14214B551500792372 /* BezierPathViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6112BB13214B551500792372 /* BezierPathViewController.m */; };
+		6112BB17214B57B200792372 /* LeftBMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6112BB16214B57B200792372 /* LeftBMessageView.m */; };
+		6112BB1A214B5D3A00792372 /* ImageTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6112BB19214B5D3A00792372 /* ImageTextView.m */; };
 		611E11871F05FC4B009AF547 /* MoveCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 611E11861F05FC4B009AF547 /* MoveCollectionViewController.m */; };
 		615FB48020C91B1100C86C44 /* MakeSocketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 615FB47F20C91B1100C86C44 /* MakeSocketViewController.m */; };
 		615FB48320C920E800C86C44 /* SocketUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 615FB48220C920E800C86C44 /* SocketUtility.m */; };
@@ -474,6 +478,14 @@
 		6110C1A31FFF1E8B00BDDEF0 /* ImageResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ImageResources.bundle; sourceTree = "<group>"; };
 		6110C1A51FFF1ED800BDDEF0 /* CustomVideoPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomVideoPlayer.h; sourceTree = "<group>"; };
 		6110C1A61FFF1ED800BDDEF0 /* CustomVideoPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomVideoPlayer.m; sourceTree = "<group>"; };
+		6112BB0F214B4F4200792372 /* BMessageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMessageView.h; sourceTree = "<group>"; };
+		6112BB10214B4F4200792372 /* BMessageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMessageView.m; sourceTree = "<group>"; };
+		6112BB12214B551500792372 /* BezierPathViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BezierPathViewController.h; sourceTree = "<group>"; };
+		6112BB13214B551500792372 /* BezierPathViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BezierPathViewController.m; sourceTree = "<group>"; };
+		6112BB15214B57B200792372 /* LeftBMessageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeftBMessageView.h; sourceTree = "<group>"; };
+		6112BB16214B57B200792372 /* LeftBMessageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeftBMessageView.m; sourceTree = "<group>"; };
+		6112BB18214B5D3A00792372 /* ImageTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageTextView.h; sourceTree = "<group>"; };
+		6112BB19214B5D3A00792372 /* ImageTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageTextView.m; sourceTree = "<group>"; };
 		611E11851F05FC4B009AF547 /* MoveCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoveCollectionViewController.h; sourceTree = "<group>"; };
 		611E11861F05FC4B009AF547 /* MoveCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoveCollectionViewController.m; sourceTree = "<group>"; };
 		615FB47E20C91B1100C86C44 /* MakeSocketViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MakeSocketViewController.h; sourceTree = "<group>"; };
@@ -663,6 +675,7 @@
 		0C69C8131E11123E00717ED6 /* AllDemo */ = {
 			isa = PBXGroup;
 			children = (
+				6112BB0E214B498900792372 /* BezierPath */,
 				61A2CF1D211A83CE001F1C0D /* Switch */,
 				615FB47D20C91AD200C86C44 /* MakeSocketRocket */,
 				616386232041511900D11056 /* ScaningQrCode */,
@@ -1229,6 +1242,21 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		6112BB0E214B498900792372 /* BezierPath */ = {
+			isa = PBXGroup;
+			children = (
+				6112BB0F214B4F4200792372 /* BMessageView.h */,
+				6112BB10214B4F4200792372 /* BMessageView.m */,
+				6112BB15214B57B200792372 /* LeftBMessageView.h */,
+				6112BB16214B57B200792372 /* LeftBMessageView.m */,
+				6112BB18214B5D3A00792372 /* ImageTextView.h */,
+				6112BB19214B5D3A00792372 /* ImageTextView.m */,
+				6112BB12214B551500792372 /* BezierPathViewController.h */,
+				6112BB13214B551500792372 /* BezierPathViewController.m */,
+			);
+			path = BezierPath;
+			sourceTree = "<group>";
+		};
 		611E11841F05FBFD009AF547 /* MoveCollectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1638,6 +1666,7 @@
 				0C8CF9F81EE6B3700067CEB8 /* NinaViewController.m in Sources */,
 				61AA58ED1F09E6C10045C776 /* SystemShareHelper.m in Sources */,
 				0C8CF9FB1EE6B3800067CEB8 /* Test1ViewController.m in Sources */,
+				6112BB1A214B5D3A00792372 /* ImageTextView.m in Sources */,
 				0C75A8BA1E13A10E007FC044 /* FootCollectionReusableView.m in Sources */,
 				0CC7603C1EFB607A006C2C02 /* LeftCollectionViewCell.m in Sources */,
 				61F495F71F8C9F2A0021EEEB /* TestBlockTool.m in Sources */,
@@ -1651,6 +1680,7 @@
 				0C75A8CF1E13A10E007FC044 /* HeadCollectionReusableView.m in Sources */,
 				6185111F20219AE400C3A6FC /* ManualRotationViewController.m in Sources */,
 				61A2CF26211A84DE001F1C0D /* SwitchModel.m in Sources */,
+				6112BB17214B57B200792372 /* LeftBMessageView.m in Sources */,
 				0C7546EF1E126F9700681997 /* VoiceViewController.m in Sources */,
 				0CC760391EFB6032006C2C02 /* OperationHeaderView.m in Sources */,
 				619D7E0A20106C65005A11D4 /* UpdateAlertTool.m in Sources */,
@@ -1658,6 +1688,7 @@
 				0C6513321E2E0FC90054A61B /* CollectionVC.m in Sources */,
 				0C75469B1E123DFC00681997 /* MaskView.m in Sources */,
 				0C7546E61E12673100681997 /* ELCOverlayImageView.m in Sources */,
+				6112BB11214B4F4200792372 /* BMessageView.m in Sources */,
 				0C75A8921E1398EB007FC044 /* LodingViewController.m in Sources */,
 				610870B91FD783860051323A /* CenterSuspensionView.m in Sources */,
 				61F495FA1F8CA2C70021EEEB /* TestBlockViewController.m in Sources */,
@@ -1694,6 +1725,7 @@
 				6197BFE61F5D54CD003922F9 /* CreatQRImage.m in Sources */,
 				61AA58EA1F09E5F70045C776 /* SystemShareViewController.m in Sources */,
 				0CBB5C551E2F08A700A3F505 /* ShufflingCollectionViewCell.m in Sources */,
+				6112BB14214B551500792372 /* BezierPathViewController.m in Sources */,
 				6163862B204156D000D11056 /* QrCodeReaderView.m in Sources */,
 				0CC75C531EE4EA4800AACA57 /* PieChartsViewController.m in Sources */,
 				6110C19F1FFF172400BDDEF0 /* CustomVideoTableViewCell.m in Sources */,
