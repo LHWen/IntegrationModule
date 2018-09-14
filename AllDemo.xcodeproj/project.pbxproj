@@ -177,6 +177,8 @@
 		6112BB14214B551500792372 /* BezierPathViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6112BB13214B551500792372 /* BezierPathViewController.m */; };
 		6112BB17214B57B200792372 /* LeftBMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6112BB16214B57B200792372 /* LeftBMessageView.m */; };
 		6112BB1A214B5D3A00792372 /* ImageTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6112BB19214B5D3A00792372 /* ImageTextView.m */; };
+		6112BB1D214B614300792372 /* PieCharView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6112BB1C214B614300792372 /* PieCharView.m */; };
+		6112BB20214B615900792372 /* PieItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6112BB1F214B615900792372 /* PieItemModel.m */; };
 		611E11871F05FC4B009AF547 /* MoveCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 611E11861F05FC4B009AF547 /* MoveCollectionViewController.m */; };
 		615FB48020C91B1100C86C44 /* MakeSocketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 615FB47F20C91B1100C86C44 /* MakeSocketViewController.m */; };
 		615FB48320C920E800C86C44 /* SocketUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 615FB48220C920E800C86C44 /* SocketUtility.m */; };
@@ -486,6 +488,10 @@
 		6112BB16214B57B200792372 /* LeftBMessageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeftBMessageView.m; sourceTree = "<group>"; };
 		6112BB18214B5D3A00792372 /* ImageTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageTextView.h; sourceTree = "<group>"; };
 		6112BB19214B5D3A00792372 /* ImageTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageTextView.m; sourceTree = "<group>"; };
+		6112BB1B214B614300792372 /* PieCharView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PieCharView.h; sourceTree = "<group>"; };
+		6112BB1C214B614300792372 /* PieCharView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PieCharView.m; sourceTree = "<group>"; };
+		6112BB1E214B615900792372 /* PieItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PieItemModel.h; sourceTree = "<group>"; };
+		6112BB1F214B615900792372 /* PieItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PieItemModel.m; sourceTree = "<group>"; };
 		611E11851F05FC4B009AF547 /* MoveCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoveCollectionViewController.h; sourceTree = "<group>"; };
 		611E11861F05FC4B009AF547 /* MoveCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoveCollectionViewController.m; sourceTree = "<group>"; };
 		615FB47E20C91B1100C86C44 /* MakeSocketViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MakeSocketViewController.h; sourceTree = "<group>"; };
@@ -1251,6 +1257,10 @@
 				6112BB16214B57B200792372 /* LeftBMessageView.m */,
 				6112BB18214B5D3A00792372 /* ImageTextView.h */,
 				6112BB19214B5D3A00792372 /* ImageTextView.m */,
+				6112BB1B214B614300792372 /* PieCharView.h */,
+				6112BB1C214B614300792372 /* PieCharView.m */,
+				6112BB1E214B615900792372 /* PieItemModel.h */,
+				6112BB1F214B615900792372 /* PieItemModel.m */,
 				6112BB12214B551500792372 /* BezierPathViewController.h */,
 				6112BB13214B551500792372 /* BezierPathViewController.m */,
 			);
@@ -1720,6 +1730,7 @@
 				61C70B691FA063B90059A7EE /* BlockChilckViewController.m in Sources */,
 				0C38C5191E1E1A34008975B0 /* TitleScrollView.m in Sources */,
 				61688A331FD647B700783343 /* TestBouncesViewController.m in Sources */,
+				6112BB20214B615900792372 /* PieItemModel.m in Sources */,
 				0C8CF9FE1EE6B3890067CEB8 /* Test2ViewController.m in Sources */,
 				0C710E381E4C08FE00D1F7A7 /* ImgViewController.m in Sources */,
 				6197BFE61F5D54CD003922F9 /* CreatQRImage.m in Sources */,
@@ -1744,6 +1755,7 @@
 				0C38C5101E1DD7D2008975B0 /* TestViewController.m in Sources */,
 				0C710E431E4C09ED00D1F7A7 /* UIImage+ImageOperationTool.m in Sources */,
 				0C710E401E4C08FE00D1F7A7 /* UIView+ImageScreenShot.m in Sources */,
+				6112BB1D214B614300792372 /* PieCharView.m in Sources */,
 				0C7546BB1E12552D00681997 /* TableCategoryViewController.m in Sources */,
 				0C9395791E484FE500FC3A7D /* WebViewController.m in Sources */,
 				0C75468E1E12109F00681997 /* MainTableViewCell.m in Sources */,

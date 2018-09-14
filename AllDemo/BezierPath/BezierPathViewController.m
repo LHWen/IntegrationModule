@@ -10,6 +10,8 @@
 #import "BMessageView.h"
 #import "LeftBMessageView.h"
 #import "ImageTextView.h"
+#import "PieCharView.h"
+#import "PieItemModel.h"
 
 @interface BezierPathViewController ()
 
@@ -39,6 +41,12 @@
     imgView.imgView = [CreateViewFactory p_setImageViewScaleAspectFitImageName:@"3DRotate1"];
     imgView.infoStr = @"the is image";
     [self.view addSubview:imgView];
+    
+    PieCharView *pieView = [[PieCharView alloc] initWithFrame:CGRectMake(0, 430, self.view.bounds.size.width, 200)];
+    pieView.backgroundColor = [UIColor grayColor];
+    pieView.data = [PieItemModel modelData];
+    pieView.radius = 50.0f;
+    [self.view addSubview:pieView];
     
 }
 
