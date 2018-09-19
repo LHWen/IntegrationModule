@@ -101,16 +101,16 @@ QrCodeReaderViewDelegate>
         return;
     }
     
-    isPush=YES;
-    UIImagePickerController * mediaUI=[[UIImagePickerController alloc]init];
-    mediaUI.sourceType=UIImagePickerControllerSourceTypePhotoLibrary;
-    mediaUI.mediaTypes=[UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypeSavedPhotosAlbum];
-    mediaUI.allowsEditing=NO;
-    mediaUI.delegate=self;
+    isPush = YES;
+    UIImagePickerController * mediaUI = [[UIImagePickerController alloc]init];
+    mediaUI.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    mediaUI.mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypeSavedPhotosAlbum];
+    mediaUI.allowsEditing = NO;
+    mediaUI.delegate = self;
     
     [self presentViewController:mediaUI animated:YES completion:^{
-        UIStatusBarStyle  barStyle=[self preferredStatusBarStyle];
-        barStyle=UIStatusBarStyleDefault;
+        UIStatusBarStyle barStyle = [self preferredStatusBarStyle];
+        barStyle = UIStatusBarStyleDefault;
     }];
 }
 
@@ -129,7 +129,7 @@ QrCodeReaderViewDelegate>
             UIStatusBarStyle style = [self preferredStatusBarStyle];
             style = UIStatusBarStyleLightContent;
             
-            CIQRCodeFeature  *feature=[feartures objectAtIndex:0];
+            CIQRCodeFeature  *feature = [feartures objectAtIndex:0];
             NSString *scanResult = feature.messageString;
             
             // 播放二维码扫描完成后的声音

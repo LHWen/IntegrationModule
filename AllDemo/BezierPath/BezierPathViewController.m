@@ -47,7 +47,6 @@
     pieView.data = [PieItemModel modelData];
     pieView.radius = 50.0f;
     [self.view addSubview:pieView];
-    
 }
 
 - (void)didReceiveMemoryWarning {

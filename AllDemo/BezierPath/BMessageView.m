@@ -35,8 +35,8 @@ static CGFloat const kTextWMax = 200.0f;
     
     /** 绘制消息气泡 */
     UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(popX, popY, popWidth, popHeight) cornerRadius:kPadding];
-    [[UIColor greenColor] setFill];
-    path.lineWidth = 0.5f;
+    [[UIColor orangeColor] setFill];
+    path.lineWidth = 5.0f;
     [path fill];
     
     /** 绘制三角形 */

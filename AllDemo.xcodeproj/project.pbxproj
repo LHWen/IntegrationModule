@@ -203,6 +203,7 @@
 		61A2CF20211A83FE001F1C0D /* SwitchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A2CF1F211A83FE001F1C0D /* SwitchViewController.m */; };
 		61A2CF23211A84CD001F1C0D /* SwitchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A2CF22211A84CD001F1C0D /* SwitchTableViewCell.m */; };
 		61A2CF26211A84DE001F1C0D /* SwitchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A2CF25211A84DE001F1C0D /* SwitchModel.m */; };
+		61A5D1712151F009006CAB97 /* NetIPUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A5D1702151F009006CAB97 /* NetIPUtility.m */; };
 		61AA58EA1F09E5F70045C776 /* SystemShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61AA58E91F09E5F70045C776 /* SystemShareViewController.m */; };
 		61AA58ED1F09E6C10045C776 /* SystemShareHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 61AA58EC1F09E6C10045C776 /* SystemShareHelper.m */; };
 		61C70B691FA063B90059A7EE /* BlockChilckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C70B681FA063B90059A7EE /* BlockChilckViewController.m */; };
@@ -536,6 +537,8 @@
 		61A2CF22211A84CD001F1C0D /* SwitchTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwitchTableViewCell.m; sourceTree = "<group>"; };
 		61A2CF24211A84DE001F1C0D /* SwitchModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwitchModel.h; sourceTree = "<group>"; };
 		61A2CF25211A84DE001F1C0D /* SwitchModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwitchModel.m; sourceTree = "<group>"; };
+		61A5D16F2151F009006CAB97 /* NetIPUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetIPUtility.h; sourceTree = "<group>"; };
+		61A5D1702151F009006CAB97 /* NetIPUtility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetIPUtility.m; sourceTree = "<group>"; };
 		61AA58E81F09E5F70045C776 /* SystemShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemShareViewController.h; sourceTree = "<group>"; };
 		61AA58E91F09E5F70045C776 /* SystemShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemShareViewController.m; sourceTree = "<group>"; };
 		61AA58EB1F09E6C10045C776 /* SystemShareHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemShareHelper.h; sourceTree = "<group>"; };
@@ -824,6 +827,8 @@
 				0C7546821E12027800681997 /* Utility.m */,
 				619D7E0820106C65005A11D4 /* UpdateAlertTool.h */,
 				619D7E0920106C65005A11D4 /* UpdateAlertTool.m */,
+				61A5D16F2151F009006CAB97 /* NetIPUtility.h */,
+				61A5D1702151F009006CAB97 /* NetIPUtility.m */,
 			);
 			path = ToolFile;
 			sourceTree = "<group>";
@@ -1656,6 +1661,7 @@
 				0C6513351E2E10220054A61B /* HeaderTableViewCell.m in Sources */,
 				0C710E3A1E4C08FE00D1F7A7 /* UIImage+ImageCircle.m in Sources */,
 				0C6F0DAB1ED286290035B157 /* ScatterChartViewController.m in Sources */,
+				61A5D1712151F009006CAB97 /* NetIPUtility.m in Sources */,
 				615FB48020C91B1100C86C44 /* MakeSocketViewController.m in Sources */,
 				0C7546C41E12602F00681997 /* MorePhotoViewController.m in Sources */,
 				0C7546B31E1254E400681997 /* HeaderView.m in Sources */,
