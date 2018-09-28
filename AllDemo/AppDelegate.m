@@ -18,6 +18,24 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    /** 本地推送 */
+    if ([UIDevice currentDevice].systemVersion.floatValue >= 8.0) {
+        
+        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeSound|UIUserNotificationTypeBadge categories:nil];
+        [application registerUserNotificationSettings:settings];
+    } else {
+        [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeSound|UIRemoteNotificationTypeBadge];
+    }
+    /** 本地推送，一般用于闹钟、行程安排、区域变化提醒等 */
+    UILocalNotification *locationNoti = [UILocalNotification new];
+    locationNoti.alertTitle = @"消息提醒";
+    locationNoti.alertBody = @"测试本地消息推送";
+//    locationNoti.soundName = @""; // 自定义推送消息声音
+    locationNoti.fireDate = [NSDate dateWithTimeIntervalSinceNow:10]; // 触发消息通知时间 10秒后触发
+    application.applicationIconBadgeNumber++;
+    [application scheduleLocalNotification:locationNoti]; // 启动本地通知
+    
+    
     [self p_initAppearance];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
@@ -56,6 +74,28 @@
         
         self.window.rootViewController = navVC;
     });
+}
+
+// 注册推送成功 获取设备唯一表示 传给服务器 服务器进行消息推送
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    
+}
+
+// 注册推送失败
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
+    
+}
+
+// 接收到苹果服务器推送消息 触发
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    
+}
+
+// 接收到本地消息推送 触发
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+    
+    NSLog(@"接收到本地推送消息");
+    application.applicationIconBadgeNumber--;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
