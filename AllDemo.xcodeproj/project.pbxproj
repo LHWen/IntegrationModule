@@ -179,6 +179,7 @@
 		6112BB1A214B5D3A00792372 /* ImageTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6112BB19214B5D3A00792372 /* ImageTextView.m */; };
 		6112BB1D214B614300792372 /* PieCharView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6112BB1C214B614300792372 /* PieCharView.m */; };
 		6112BB20214B615900792372 /* PieItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6112BB1F214B615900792372 /* PieItemModel.m */; };
+		611B0029216C55D300C700CC /* SolarTermTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 611B0028216C55D300C700CC /* SolarTermTool.m */; };
 		611E11871F05FC4B009AF547 /* MoveCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 611E11861F05FC4B009AF547 /* MoveCollectionViewController.m */; };
 		615FB48020C91B1100C86C44 /* MakeSocketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 615FB47F20C91B1100C86C44 /* MakeSocketViewController.m */; };
 		615FB48320C920E800C86C44 /* SocketUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 615FB48220C920E800C86C44 /* SocketUtility.m */; };
@@ -493,6 +494,8 @@
 		6112BB1C214B614300792372 /* PieCharView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PieCharView.m; sourceTree = "<group>"; };
 		6112BB1E214B615900792372 /* PieItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PieItemModel.h; sourceTree = "<group>"; };
 		6112BB1F214B615900792372 /* PieItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PieItemModel.m; sourceTree = "<group>"; };
+		611B0027216C55D300C700CC /* SolarTermTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SolarTermTool.h; sourceTree = "<group>"; };
+		611B0028216C55D300C700CC /* SolarTermTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SolarTermTool.m; sourceTree = "<group>"; };
 		611E11851F05FC4B009AF547 /* MoveCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoveCollectionViewController.h; sourceTree = "<group>"; };
 		611E11861F05FC4B009AF547 /* MoveCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoveCollectionViewController.m; sourceTree = "<group>"; };
 		615FB47E20C91B1100C86C44 /* MakeSocketViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MakeSocketViewController.h; sourceTree = "<group>"; };
@@ -829,6 +832,8 @@
 				619D7E0920106C65005A11D4 /* UpdateAlertTool.m */,
 				61A5D16F2151F009006CAB97 /* NetIPUtility.h */,
 				61A5D1702151F009006CAB97 /* NetIPUtility.m */,
+				611B0027216C55D300C700CC /* SolarTermTool.h */,
+				611B0028216C55D300C700CC /* SolarTermTool.m */,
 			);
 			path = ToolFile;
 			sourceTree = "<group>";
@@ -1741,6 +1746,7 @@
 				0C710E381E4C08FE00D1F7A7 /* ImgViewController.m in Sources */,
 				6197BFE61F5D54CD003922F9 /* CreatQRImage.m in Sources */,
 				61AA58EA1F09E5F70045C776 /* SystemShareViewController.m in Sources */,
+				611B0029216C55D300C700CC /* SolarTermTool.m in Sources */,
 				0CBB5C551E2F08A700A3F505 /* ShufflingCollectionViewCell.m in Sources */,
 				6112BB14214B551500792372 /* BezierPathViewController.m in Sources */,
 				6163862B204156D000D11056 /* QrCodeReaderView.m in Sources */,
@@ -1889,6 +1895,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = N4D937Q79X;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AllDemo/ScrollDisplay",
@@ -1897,7 +1904,7 @@
 				INFOPLIST_FILE = AllDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.yuhui.AllDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = net.wen.AllDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "AllDemo/Charts/AllDemo-Bridging-Header.h";
@@ -1916,6 +1923,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = N4D937Q79X;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AllDemo/ScrollDisplay",
@@ -1924,7 +1932,7 @@
 				INFOPLIST_FILE = AllDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.yuhui.AllDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = net.wen.AllDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "AllDemo/Charts/AllDemo-Bridging-Header.h";

@@ -72,9 +72,9 @@ static NSString *const kSwitchCell = @"SwitchTableViewCell";
         sModel.open = isOpen;
         
         if (sModel.open) {
-            NSLog(@"%ld row change switch is on", row);
+            NSLog(@"%d row change switch is on", row);
         } else {
-            NSLog(@"%ld row change switch is off", row);
+            NSLog(@"%d row change switch is off", row);
         }
         dispatch_async(dispatch_get_main_queue(), ^{
             NSIndexPath *reloadIndexPath = [NSIndexPath indexPathForRow:row inSection:indexPath.section];

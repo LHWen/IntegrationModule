@@ -93,9 +93,9 @@
 - (void)switchAction:(UISwitch *)sender {
     
     if (_rSwitch.on) {
-        NSLog(@"%ld row switch is open", _indexRow);
+        NSLog(@"%d row switch is open", _indexRow);
     } else {
-        NSLog(@"%ld row switch is off", _indexRow);
+        NSLog(@"%d row switch is off", _indexRow);
     }
     
     // 添加3DTouch 轻震动效果

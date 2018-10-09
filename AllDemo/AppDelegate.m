@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "LoginViewController.h"
+#import "SolarTermTool.h"
 
 @interface AppDelegate ()
 
@@ -18,23 +19,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    /** 本地推送 */
-    if ([UIDevice currentDevice].systemVersion.floatValue >= 8.0) {
-        
-        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeSound|UIUserNotificationTypeBadge categories:nil];
-        [application registerUserNotificationSettings:settings];
-    } else {
-        [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeSound|UIRemoteNotificationTypeBadge];
-    }
-    /** 本地推送，一般用于闹钟、行程安排、区域变化提醒等 */
-    UILocalNotification *locationNoti = [UILocalNotification new];
-    locationNoti.alertTitle = @"消息提醒";
-    locationNoti.alertBody = @"测试本地消息推送";
-//    locationNoti.soundName = @""; // 自定义推送消息声音
-    locationNoti.fireDate = [NSDate dateWithTimeIntervalSinceNow:10]; // 触发消息通知时间 10秒后触发
-    application.applicationIconBadgeNumber++;
-    [application scheduleLocalNotification:locationNoti]; // 启动本地通知
-    
+    [self p_initLocationNotificationApplication:application];
     
     [self p_initAppearance];
     
@@ -43,11 +28,34 @@
     self.window.rootViewController = loginVC;
     [self.window makeKeyAndVisible];
     
+    NSString *solarTerm = [SolarTermTool solarTermDate:[NSDate date]];
+    NSLog(@"solar term is %@", solarTerm);
+    
     return YES;
 }
 
-- (void)p_initAppearance
-{
+- (void)p_initLocationNotificationApplication:(UIApplication *)application {
+    
+    /** 本地推送 */
+    if ([UIDevice currentDevice].systemVersion.floatValue >= 8.0) {
+        
+        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeSound|UIUserNotificationTypeBadge categories:nil];
+        [application registerUserNotificationSettings:settings];
+    } else { // 如App最低版本支持 iOS 8.0 则不需要进行判断，直接使用上方注册本地通知
+        [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeSound|UIRemoteNotificationTypeBadge];
+    }
+    /** 本地推送，一般用于闹钟、行程安排、区域变化提醒等 */
+    UILocalNotification *locationNoti = [UILocalNotification new];
+    locationNoti.alertTitle = @"消息提醒";
+    locationNoti.alertBody = @"测试本地消息推送";
+    //    locationNoti.soundName = @""; // 自定义推送消息声音
+    locationNoti.fireDate = [NSDate dateWithTimeIntervalSinceNow:10]; // 触发消息通知时间 10秒后触发
+    application.applicationIconBadgeNumber++;
+    [application scheduleLocalNotification:locationNoti]; // 启动本地通知
+}
+
+- (void)p_initAppearance {
+    
     // 状态栏
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     // 设置导航栏颜色
@@ -62,8 +70,8 @@
 }
 
 /**-----------------根视图切换-------------------*/
-- (void)changeRootViewControllerWithController:(UIViewController *)controller
-{
+- (void)changeRootViewControllerWithController:(UIViewController *)controller {
+    
     dispatch_async(dispatch_get_main_queue(), ^{
         
         UIImage *img = [Utility createImageWithColor:[Utility colorWithHexString:@"#00FFFF"]];
