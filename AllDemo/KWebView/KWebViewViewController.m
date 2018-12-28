@@ -24,6 +24,7 @@
     _kWebView.navigationDelegate = self;
     _kWebView.UIDelegate = self;
     [_kWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.baidu.com"]]];    // 注意 https
+//    [_kWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://192.168.1.162:9760"]]];
     [self.view addSubview:_kWebView];
 }
 

@@ -195,6 +195,8 @@
 		61688A3C1FD692BD00783343 /* BottomSuspensionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 61688A3B1FD692BD00783343 /* BottomSuspensionView.m */; };
 		61688A3F1FD693FA00783343 /* BottomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 61688A3E1FD693FA00783343 /* BottomCollectionViewCell.m */; };
 		616E60081F7DE3B600E35E9E /* WaveToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 616E60071F7DE3B600E35E9E /* WaveToolView.m */; };
+		617C706A21BF92D200F5095B /* SideslipTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 617C706921BF92D200F5095B /* SideslipTableViewController.m */; };
+		617C706D21BF9DE800F5095B /* TestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 617C706C21BF9DE800F5095B /* TestCell.m */; };
 		6185111F20219AE400C3A6FC /* ManualRotationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6185111E20219AE400C3A6FC /* ManualRotationViewController.m */; };
 		619004C82029488100D1BCD5 /* LineChartsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 619004C72029488100D1BCD5 /* LineChartsViewController.m */; };
 		6197BFE61F5D54CD003922F9 /* CreatQRImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6197BFE51F5D54CD003922F9 /* CreatQRImage.m */; };
@@ -522,6 +524,10 @@
 		61688A3E1FD693FA00783343 /* BottomCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BottomCollectionViewCell.m; sourceTree = "<group>"; };
 		616E60061F7DE3B600E35E9E /* WaveToolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveToolView.h; sourceTree = "<group>"; };
 		616E60071F7DE3B600E35E9E /* WaveToolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveToolView.m; sourceTree = "<group>"; };
+		617C706821BF92D200F5095B /* SideslipTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SideslipTableViewController.h; sourceTree = "<group>"; };
+		617C706921BF92D200F5095B /* SideslipTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SideslipTableViewController.m; sourceTree = "<group>"; };
+		617C706B21BF9DE800F5095B /* TestCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCell.h; sourceTree = "<group>"; };
+		617C706C21BF9DE800F5095B /* TestCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCell.m; sourceTree = "<group>"; };
 		6185111D20219AE400C3A6FC /* ManualRotationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ManualRotationViewController.h; sourceTree = "<group>"; };
 		6185111E20219AE400C3A6FC /* ManualRotationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ManualRotationViewController.m; sourceTree = "<group>"; };
 		619004C62029488100D1BCD5 /* LineChartsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LineChartsViewController.h; sourceTree = "<group>"; };
@@ -687,6 +693,7 @@
 		0C69C8131E11123E00717ED6 /* AllDemo */ = {
 			isa = PBXGroup;
 			children = (
+				617C706721BF92B600F5095B /* SideslipTable */,
 				6112BB0E214B498900792372 /* BezierPath */,
 				61A2CF1D211A83CE001F1C0D /* Switch */,
 				615FB47D20C91AD200C86C44 /* MakeSocketRocket */,
@@ -1358,6 +1365,17 @@
 			path = WaveView;
 			sourceTree = "<group>";
 		};
+		617C706721BF92B600F5095B /* SideslipTable */ = {
+			isa = PBXGroup;
+			children = (
+				617C706821BF92D200F5095B /* SideslipTableViewController.h */,
+				617C706921BF92D200F5095B /* SideslipTableViewController.m */,
+				617C706B21BF9DE800F5095B /* TestCell.h */,
+				617C706C21BF9DE800F5095B /* TestCell.m */,
+			);
+			path = SideslipTable;
+			sourceTree = "<group>";
+		};
 		6185111B20219AD700C3A6FC /* 3D */ = {
 			isa = PBXGroup;
 			children = (
@@ -1674,6 +1692,7 @@
 				61688A3C1FD692BD00783343 /* BottomSuspensionView.m in Sources */,
 				0C75A8D11E13A10E007FC044 /* WaterCollectionViewLayout.m in Sources */,
 				0C7546B51E1254E400681997 /* RightTableViewCell.m in Sources */,
+				617C706A21BF92D200F5095B /* SideslipTableViewController.m in Sources */,
 				0C7546AC1E1254D900681997 /* CategoryModel.m in Sources */,
 				0C14E8321E49AB8C009979B3 /* EditorVideoController.m in Sources */,
 				0C38C5131E1DD7DE008975B0 /* AllViewController.m in Sources */,
@@ -1721,6 +1740,7 @@
 				6110C1A71FFF1ED800BDDEF0 /* CustomVideoPlayer.m in Sources */,
 				0CCA6C4F1EEE1AB500C92E86 /* BarChartsViewController.m in Sources */,
 				6110C19C1FFF165A00BDDEF0 /* VideoItemModel.m in Sources */,
+				617C706D21BF9DE800F5095B /* TestCell.m in Sources */,
 				0C75A8B91E13A10E007FC044 /* UIconllectionViewSimpleVC.m in Sources */,
 				0C75A88E1E13984F007FC044 /* HWActivityIndicator.m in Sources */,
 				0C7546E31E12673100681997 /* ELCAssetTablePicker.m in Sources */,

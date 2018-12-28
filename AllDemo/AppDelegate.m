@@ -31,7 +31,34 @@
     NSString *solarTerm = [SolarTermTool solarTermDate:[NSDate date]];
     NSLog(@"solar term is %@", solarTerm);
     
+    // 价格字符样式 0.20 2.00 10.00 200.00 2,000.00 20,000.00 200,000.00 2,000,000.00 20,000,000.00 200,000,000.00
+    NSLog(@"价格：%@", [self formatDecimalNumber:@"0.2"]);
+    NSLog(@"价格：%@", [self formatDecimalNumber:@"2"]);
+    NSLog(@"价格：%@", [self formatDecimalNumber:@"10"]);
+    NSLog(@"价格：%@", [self formatDecimalNumber:@"200"]);
+    NSLog(@"价格：%@", [self formatDecimalNumber:@"2000"]);
+    NSLog(@"价格：%@", [self formatDecimalNumber:@"20000"]);
+    NSLog(@"价格：%@", [self formatDecimalNumber:@"200000"]);
+    NSLog(@"价格：%@", [self formatDecimalNumber:@"2000000"]);
+    NSLog(@"价格：%@", [self formatDecimalNumber:@"20000000"]);
+    NSLog(@"价格：%@", [self formatDecimalNumber:@"200000000"]);
+    
     return YES;
+}
+
+- (NSString *)formatDecimalNumber:(NSString *)string {
+    
+    if (!string || string.length == 0) {
+        return string;
+    }
+    
+    NSNumber *number = @([string doubleValue]);
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    formatter.numberStyle = kCFNumberFormatterDecimalStyle;
+    formatter.positiveFormat = @"###,##0.00";
+    
+    NSString *amountString = [formatter stringFromNumber:number];
+    return amountString;
 }
 
 - (void)p_initLocationNotificationApplication:(UIApplication *)application {
