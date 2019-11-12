@@ -52,7 +52,7 @@ static SystemShareHelper * shareHelper;
         return YES;
     }
     
-    NSString * serviceType = [self serviceTypeWithType:type];
+    NSString *serviceType = [self serviceTypeWithType:type];
     SLComposeViewController *composeVC = [SLComposeViewController composeViewControllerForServiceType:serviceType];
     // 添加要分享的图片
     

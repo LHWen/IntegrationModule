@@ -48,7 +48,7 @@
 - (void)sendPhotoDatas:(UIButton *)button {
  
     NSLog(@"上传照片调用以下方法");
-//    [self sendImages];
+    [self sendImages];
 }
 
 /** ------使用AF进行上传照片流------- */
@@ -57,6 +57,11 @@
     NSArray *imgArray = [[_addPhotoView getArray] copy];
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    
+//    AFHTTPRequestSerializer *requestSerializer =  [AFJSONRequestSerializer serializer];
+//    [requestSerializer setValue:@"df803932afae7d620c136815f7692433" forHTTPHeaderField:@"x-auth-token"];
+//    manager.requestSerializer = requestSerializer;
+
     //接收类型不一致请替换一致text/html或别的
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",
                                                          @"text/html",
@@ -65,7 +70,8 @@
                                                          @"application/octet-stream",
                                                          @"text/json",
                                                          nil];
-    NSString *url = @"此处是请求地址";
+//    NSString *url = @"http://192.168.11.160:8899/app/open/ocrImage";
+    NSString *url = @"http://192.168.11.160:8989/app/proxy/file/upload";
     
     /**
      * 如果需要上传多个参数：使用字典形式保存在 parameters中
@@ -73,7 +79,9 @@
      *  @"key": value
      */
     
-    [manager POST:url parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData> _Nonnull formData) {
+    NSDictionary *params = @{@"type": @(3)};
+    
+    [manager POST:url parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData> _Nonnull formData) {
         
         for (NSInteger i = 0; i < imgArray.count; i++) {
             
@@ -88,9 +96,9 @@
                 imageData = UIImageJPEGRepresentation(imgArray[i], 1.0);
             }
             
-            //上传的参数(上传图片，以文件流的格式)
+            //上传的参数(上传图片，以文件流的格式)  file 参数名
             [formData appendPartWithFileData:imageData
-                                        name:@"图片的参数"
+                                        name:@"file"
                                     fileName:fileName
                                     mimeType:@"application/octet-stream"];
         }
@@ -104,7 +112,6 @@
         //上传失败
         NSLog(@"task=上传失败：%@", error);
     }];
-
 }
 
 @end

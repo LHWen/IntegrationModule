@@ -33,6 +33,8 @@ static NSString *const kObserverPage = @"currentPage";
 @property (nonatomic, strong) NinaBaseView *ninaBaseView;
 @property (nonatomic, assign) BOOL hasSettingScrollEnabled;
 @property (nonatomic, assign) BOOL hasSettingLinePer;
+@property (nonatomic, strong) id currentObject;
+@property (nonatomic, strong) id lastObject;
 @end
 
 @implementation NinaPagerView
@@ -48,12 +50,12 @@ static NSString *const kObserverPage = @"currentPage";
     BOOL ableLoadData;
 }
 
-- (instancetype)initWithFrame:(CGRect)frame WithTitles:(NSArray *)titles WithVCs:(NSArray *)childVCs
+- (instancetype)initWithFrame:(CGRect)frame WithTitles:(NSArray *)titles WithObjects:(NSArray *)objects
 {
     if (self = [super init]) {
         self.frame = frame;
         titlesArray = titles;
-        classArray = childVCs;
+        classArray = objects;
     }
     return self;
 }
@@ -100,12 +102,17 @@ static NSString *const kObserverPage = @"currentPage";
 #pragma mark - LayOutSubViews
 - (void)layoutSubviews {
     [super layoutSubviews];
-    [self loadDataForView];
+    if (!_ninaBaseView) {
+        if (_topTabHeight <= 25) {
+            _topTabHeight = 40;
+        }
+        [self loadDataForView];
+    }
 }
 
 #pragma mark - LoadData
 - (void)loadDataForView {
-    [self createPagerView:titlesArray WithVCs:classArray];
+    [self createPagerView:titlesArray WithObjects:classArray];
     self.ninaBaseView.btnUnSelectColor = _unSelectTitleColor;
     self.ninaBaseView.btnSelectColor = _selectTitleColor;
     self.ninaBaseView.underlineBlockColor = (_ninaPagerStyles == 1)?_sliderBlockColor:_underlineColor;
@@ -123,7 +130,7 @@ static NSString *const kObserverPage = @"currentPage";
     self.ninaBaseView.bottomLinePer = (_selectBottomLinePer > 0 && _selectBottomLinePer < 1 && _hasSettingLinePer)?_selectBottomLinePer:1;
     self.ninaBaseView.autoFitTitleLine = (_nina_autoBottomLineEnable && !_hasSettingLinePer)?_nina_autoBottomLineEnable:NO;
     self.ninaBaseView.bottomLineHeight = _selectBottomLineHeight > 0?_selectBottomLineHeight:2;
-    self.ninaBaseView.sliderCornerRadius = _slideBlockCornerRadius > 0?_slideBlockCornerRadius:0;
+    self.ninaBaseView.cornerRadiusRatio = _sliderCornerRadiusRatio > 0?_sliderCornerRadiusRatio:0;
     self.ninaBaseView.titleArray = titlesArray;
     if (_nina_navigationBarHidden == YES) {
         self.viewController.automaticallyAdjustsScrollViewInsets = NO;
@@ -178,6 +185,11 @@ static NSString *const kObserverPage = @"currentPage";
     [self.ninaBaseView reloadTabItems:updatedTitles];
 }
 
+- (void)reloadTopTabByTitles:(NSArray *)updatedTitles {
+    titlesArray = updatedTitles;
+    [self.ninaBaseView reloadTabItems:updatedTitles];
+}
+
 #pragma mark - NSCache
 - (NSCache *)limitControllerCache {
     if (!_limitControllerCache) {
@@ -190,11 +202,11 @@ static NSString *const kObserverPage = @"currentPage";
 }
 
 #pragma mark - CreateView
-- (void)createPagerView:(NSArray *)titles WithVCs:(NSArray *)childVCs {
+- (void)createPagerView:(NSArray *)titles WithObjects:(NSArray *)objects {
     viewNumArray = [NSMutableArray array];
     vcsArray = [NSMutableArray array];
     vcsTagArray = [NSMutableArray array];
-    if (titles.count > 0 && childVCs.count > 0) {
+    if (titles.count > 0 && objects.count > 0) {
         [self addSubview:self.ninaBaseView];
         //First ViewController present to the screen
         ableLoadData = YES;
@@ -210,10 +222,17 @@ static NSString *const kObserverPage = @"currentPage";
         if (isDebugging) {
             NSLog(@"It's controller %li",(long)page + 1);
         }
-        self.PageIndex = @(page).stringValue;
-        if ([self.delegate respondsToSelector:@selector(ninaCurrentPageIndex:)]) {
-            [self.delegate ninaCurrentPageIndex:self.PageIndex];
+        for (NSInteger i = 0; i < vcsTagArray.count; i++) {
+            if ([vcsTagArray[i] isEqualToString:[NSString stringWithFormat:@"%i",[change[@"new"] intValue]]]) {
+                self.lastObject = self.currentObject;
+                self.currentObject = vcsArray[i];
+                if ([vcsArray[i] isKindOfClass:[UIViewController class]]) {
+                    [vcsArray[i] viewDidAppear:YES];
+                }
+            }
         }
+        self.pageIndex = page;
+        [self performSelector:@selector(currentPageAndObject) withObject:nil afterDelay:0.1];
         if (titlesArray.count > 5) {
             CGFloat topTabOffsetX = 0;
             if (page >= 2) {
@@ -315,6 +334,8 @@ static NSString *const kObserverPage = @"currentPage";
  */
 - (void)createFirstViewController:(UIViewController *)ctrl {
     firstVC = ctrl;
+    self.lastObject = self.currentObject;
+    self.currentObject = ctrl;
     ctrl.view.frame = CGRectMake(FUll_VIEW_WIDTH * _ninaDefaultPage, 0, FUll_VIEW_WIDTH, self.frame.size.height - _topTabHeight);
     [self.ninaBaseView.scrollView addSubview:ctrl.view];
     /**<  Add new test cache   **/
@@ -329,7 +350,7 @@ static NSString *const kObserverPage = @"currentPage";
         NSLog(@"Controller or view %@",transString);
         NSLog(@"Use new created controller or view %@",transString);
     }
-    self.PageIndex = @"1";
+    self.pageIndex = _ninaDefaultPage;
 }
 
 /**
@@ -340,6 +361,8 @@ static NSString *const kObserverPage = @"currentPage";
  */
 - (void)createOtherViewControllers:(UIViewController *)ctrl WithControllerTag:(NSInteger)i {
     [self.viewController addChildViewController:ctrl];
+    self.lastObject = self.currentObject;
+    self.currentObject = ctrl;
     [vcsArray addObject:ctrl];
     NSString *tagStr = @(i).stringValue;
     [vcsTagArray addObject:tagStr];
@@ -406,6 +429,12 @@ static NSString *const kObserverPage = @"currentPage";
             singleView.frame = CGRectMake(FUll_VIEW_WIDTH * ninaTag, 0, FUll_VIEW_WIDTH, self.frame.size.height - _topTabHeight);
             [self.ninaBaseView.scrollView addSubview:singleView];
         }
+    }
+}
+
+- (void)currentPageAndObject {
+    if ([self.delegate respondsToSelector:@selector(ninaCurrentPageIndex:currentObject:lastObject:)]) {
+        [self.delegate ninaCurrentPageIndex:self.pageIndex currentObject:self.currentObject lastObject:self.lastObject];
     }
 }
 

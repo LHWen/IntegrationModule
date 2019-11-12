@@ -35,7 +35,7 @@
 @property (assign, nonatomic) CGFloat blockHeight; /**< 滑块高度 **/
 @property (assign, nonatomic) CGFloat bottomLinePer; /**< 下划线占比 **/
 @property (assign, nonatomic) CGFloat bottomLineHeight; /**< 下划线高度 **/
-@property (assign, nonatomic) CGFloat sliderCornerRadius; /**< 滑块圆角 **/
+@property (assign, nonatomic) CGFloat cornerRadiusRatio; /**< 滑块圆角 **/
 @property (assign, nonatomic) CGFloat titlesFont; /**< 标题字体大小 **/
 @property (assign, nonatomic) CGFloat topHeight; /**< TopTab高度 **/
 @property (assign, nonatomic) BOOL topTabUnderLineHidden; /**< 是否显示下方的下划线 **/
@@ -50,10 +50,6 @@
  *  Init Method.
  *
  *  @param frame          NinaBaseView frame.
- *  @param selectColor    Toptab button's select color.
- *  @param unselectColor  Toptab button's unselect color.
- *  @param underlineColor Toptab underline color.
- *  @param topTabColor    Toptab background color.
  *  @param topTabNum      Toptab styles.
  *
  */

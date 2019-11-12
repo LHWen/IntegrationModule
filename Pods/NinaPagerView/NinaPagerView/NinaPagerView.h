@@ -41,34 +41,43 @@ typedef NS_ENUM(NSInteger, NinaPagerStyle) {
  */
 - (BOOL)deallocVCsIfUnnecessary;
 /**
- *  通过此代理方法您可以获取到当前页码进而对相关的控制器进行操作。
- *  Get current page of your views or viewcontrollers by the delegate method, you can code here when you need it.
+ *  通过此代理方法您可以获取到当前页码、当前对象及上一个对象进而对相关的控制器进行操作。
+ *  Get current page and objects by the delegate method, you can code here when you need it.
  *
- *  @param currentPage Current page when you scroll to or choose the view or controller.
+ *  @param currentPage      Current page when you scroll to or choose the view or controller.
+ *  @param currentObject    Current object that you scroll to.
+ *  @param lastObject       Last object that you scroll to.
  */
-- (void)ninaCurrentPageIndex:(NSString *)currentPage;
+- (void)ninaCurrentPageIndex:(NSInteger)currentPage currentObject:(id)currentObject lastObject:(id)lastObject;
 @end
 
 @interface NinaPagerView : UIView
 /**
  *  NinaPagerView init method.
  *
- *  @param ninaPagerStyle NinaPagerView show style.
+ *  @param frame          NinaPagerView's frame.
  *  @param titles         Titles in Toptab.
- *  @param childVCs       Controllers or views in NinaPagerView.
- *  @param colors         Several colors can set in NinaPagerView.
+ *  @param objects        Controllers,views or storyboards.
  *
  */
-- (instancetype)initWithFrame:(CGRect)frame WithTitles:(NSArray *)titles WithVCs:(NSArray *)childVCs;
+- (instancetype)initWithFrame:(CGRect)frame WithTitles:(NSArray *)titles WithObjects:(NSArray *)objects;
 
 
 /**
  *  Reload NinaPagerView with updated titles and viewcontrollers or views.
  *
- @param updatedTitles   update titles.
- @param updatedVCs      update viewcontrollers and views.
+ @param updatedTitles       update titles.
+ @param updatedObjects      update viewcontrollers,views and others.
  */
 - (void)reloadTopTabByTitles:(NSArray *)updatedTitles WithObjects:(NSArray *)updatedObjects;
+
+/**
+ *  Reload NinaPagerView with updated titles.
+ *  Warning:Titles count must equal to the origin titles count.
+ *
+ @param updatedTitles       update titles.
+ */
+- (void)reloadTopTabByTitles:(NSArray *)updatedTitles;
 
 /**<
  *  顶部菜单栏的展示样式。
@@ -105,7 +114,7 @@ typedef NS_ENUM(NSInteger, NinaPagerStyle) {
  *  所在的控制器index或点击上方button的index。
  *  Current controller's or view's index and click button's index.
  **/
-@property (copy, nonatomic) NSString *PageIndex;
+@property (assign, nonatomic) NSInteger pageIndex;
 /**<
  *  设置默认加载的界面，默认加载的界面是第一页，您可以选择要加载第几页的页面，不仅仅局限于第一页这样的展示方法，更加灵活。
  *  Set default loading page,you can set this for index of your page.Not only loads first page,but also choose other pages as default page.More flexible.
@@ -147,10 +156,10 @@ typedef NS_ENUM(NSInteger, NinaPagerStyle) {
  **/
 @property (assign, nonatomic) CGFloat sliderHeight;
 /**<
- *  滑块的layer.cornerRadius属性，默认的计算公式是(滑块宽度 / SlideBlockCornerRadius)，若您想要自定义调整，请修改此参数，如果不想要圆角，请设置此参数为0。
- *  Sliderblock's layer.cornerRadius,if you don't want cornerRadius,please set this to 0.
+ *  滑块的layer.cornerRadius属性，默认的计算公式是(滑块高度 / SlideBlockCornerRadius)，若您想要自定义调整，请修改此参数，如果不想要圆角，请设置此参数为0。
+ *  Sliderblock's layer.cornerRadius,it equals to sliderHeight / SlideBlockCornerRadius,if you don't want cornerRadius,please set this to 0.
  **/
-@property (assign, nonatomic) CGFloat slideBlockCornerRadius;
+@property (assign, nonatomic) CGFloat sliderCornerRadiusRatio;
 /**<
  *  是否隐藏了导航栏，您的导航栏如果隐藏或者没有，需要将此属性设置为YES。
  *  Hide NavigationBar or not,if you wanna set this to YES,you must hide your NavigationBar first.

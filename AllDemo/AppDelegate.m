@@ -19,7 +19,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    [self p_initLocationNotificationApplication:application];
+    // 通知的推送与注册 在APP开启注册初始化一次就OK了，多次初始化本地通知，会创建同一时间的多个消息通知
+    if (![UserDefaultsHelper getBoolForKey:@"SETLOCALNOTIFICATION"]) {    
+        [self p_initLocationNotificationApplication:application];
+    }
     
     [self p_initAppearance];
     
@@ -63,6 +66,8 @@
 
 - (void)p_initLocationNotificationApplication:(UIApplication *)application {
     
+    // 设置了本地通知
+    [UserDefaultsHelper setBoolForKey:YES :@"SETLOCALNOTIFICATION"];
     /** 本地推送 */
     if ([UIDevice currentDevice].systemVersion.floatValue >= 8.0) {
         

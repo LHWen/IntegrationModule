@@ -81,6 +81,9 @@
         _scrollView.alwaysBounceHorizontal = YES;
         _scrollView.scrollsToTop = NO;
         _scrollView.bounces = NO;
+        if (@available(iOS 11.0, *)) {
+            _scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        }
     }
     return _scrollView;
 }
@@ -102,6 +105,9 @@
         _topTab.bounces = NO;
         _topTab.scrollsToTop = NO;
         [self updateTopTabUI];
+        if (@available(iOS 11.0, *)) {
+            _topTab.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        }
     }
     return _topTab;
 }
@@ -387,8 +393,8 @@
             break;
         case 1: {
             lineBottom.frame = CGRectMake(lineBottomDis + FUll_VIEW_WIDTH * yourCount * defaultPage, (_topHeight - _blockHeight) / 2.0, yourCount * FUll_VIEW_WIDTH * _bottomLinePer, _blockHeight);
-            if (_sliderCornerRadius > 0) {
-                lineBottom.layer.cornerRadius = _blockHeight / _sliderCornerRadius;
+            if (_cornerRadiusRatio > 0) {
+                lineBottom.layer.cornerRadius = _blockHeight / _cornerRadiusRatio;
             }
         }
             break;

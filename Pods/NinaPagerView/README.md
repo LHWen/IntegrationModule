@@ -16,6 +16,7 @@
 - [x] Edit everything in TopTab as you wish,you can custom your own views here.
 - [x] Not only fits UIViewController,but also fits UIView.
 - [x] Select NinaPagerStyle as you wish.
+- [x] Easily reload titles and objects(views,controllers and xibs).
 
 ## Preview
 
@@ -47,37 +48,37 @@ github "RamWire/NinaPagerView"
 ## Usage
 You need add '**NinaPagerView.h**'(**CocoaPods**) or <**NinaPagerViewCarthage/NinaPagerViewCarthage.h**>(**Carthage**) to your project.Then load the codes:
 ```objc
-NinaPagerView *ninaPagerView = [[NinaPagerView alloc] initWithFrame:pagerRect WithTitles:titleArray WithVCs:vcsArray];
+NinaPagerView *ninaPagerView = [[NinaPagerView alloc] initWithFrame:pagerRect WithTitles:titleArray WithObjects:objects];
 [self.view addSubview:ninaPagerView];
 ```
 That's all!
 
 ### Other Settings and Tips
-* Numerous **properties** in NinaPagerView you can set as you wish.🍻🍻🍻
-* NinaPagerView now supports **custom topTab menus**.Creating your own views into NinaPagerView!(please read the Example notes if you wanna to know more)🍻🍻🍻
-* You can set three necessary Array by following codes(please read the Example notes if you wanna to know more).
+* Numerous **properties** in NinaPagerView you can set as you wish.
+* NinaPagerView now supports **custom topTab menus**.Creating your own views into NinaPagerView!(read the Example notes if you wanna to know more)
+* You can set two necessary Array by following codes(please read the Example notes if you wanna to know more).
 ```objc
-NSArray *titleArray = @[
-                        @"Dalian",
-                        @"Tokyo",
-                        @"New York",
-                        @"Los Angeles",
-                        @"Kyoto",
-                        @"Osaka",
-                        @"Auckland",
-                        @"Miami",
-                        @"Houston"
-                      ];
-NSArray *vcsArray = @[
-                      @"FirstViewController",
-                      @"SecondViewController",
-                      @"ThirdViewController",
-                      @"ForthViewController",
-                      @"FifthViewController",
-                      @"SixthViewController",
-                      @"SeventhViewController",
-                      @"EighthViewController",
-                      @"NinthViewController",
+NSArray *titles = @[
+                    @"Dalian",
+                    @"Tokyo",
+                    @"New York",
+                    @"Los Angeles",
+                    @"Kyoto",
+                    @"Osaka",
+                    @"Auckland",
+                    @"Miami",
+                    @"Houston"
+                  ];
+NSArray *objects = @[
+                      @"FirstView",
+                      @"SecondView",
+                      @"ThirdView",
+                      @"ForthView",
+                      @"FifthView",
+                      @"SixthView",
+                      @"SeventhView",
+                      @"EighthView",
+                      @"NinthView",
                     ];
 ```
 * If your controller doesn't have navigationBar or you hide the navigationBar,you need set **nina_navigationBarHidden** to YES. 
@@ -89,6 +90,7 @@ ninaPagerView.nina_navigationBarHidden = YES;
 ```objc
 self.navigationController.navigationBar.translucent = NO;
 ```
+* If you use controllers way, please make sure add subview in viewWillLayoutSubviews method, it's not work in viewDidLoad method, you can find more in demo.
 
 ### NinaPagerViewDelegate
 #### Memory Management
@@ -99,14 +101,20 @@ self.navigationController.navigationBar.translucent = NO;
 }
 ```
 #### Current Page
-* Get current page of your views or viewcontrollers by the delegate method, you can code here when you need it. 
+* Get current page and objects by the delegate method, you can code here when you need it. 
 ```objc
-- (void)ninaCurrentPageIndex:(NSString *)currentPage {
-  NSLog(@"Current page is %@",currentPage);
+- (void)ninaCurrentPageIndex:(NSInteger)currentPage currentObject:(id)currentObject lastObject:(id)lastObject {
+    NSLog(@"Current page is %li",currentPage);
 }
 ```
 
 ## Change Log
+#### v1.6.3
+Bug fixes.<br />
+#### v1.6.2
+Updated codes for iOS 11，and other improvements.<br />
+#### v1.6.0
+Add **ninaChosenPage** and reload data function.<br />
 #### v1.5.3
 Add **topTabScrollHidden** function.<br />
 #### v1.5.1

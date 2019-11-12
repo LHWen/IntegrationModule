@@ -122,7 +122,7 @@
     
     self.barChartView.legend.enabled = NO;//不显示图例说明
 //    隐藏描述文字，代码如下：
-    self.barChartView.descriptionText = @"";//不显示，就设为空字符串即可
+//    self.barChartView.descriptionText = @"";//不显示，就设为空字符串即可
     
     //为柱形图提供数据
     self.barChartView.data = [self setData];
@@ -179,7 +179,8 @@
 //    [data setValueFormatter:formatter];
     
     
-    BarChartDataSet *set1 = [[BarChartDataSet alloc] initWithValues:yVals label:@"The year 2017"];
+//    BarChartDataSet *set1 = [[BarChartDataSet alloc] initWithValues:yVals label:@"The year 2017"];
+    BarChartDataSet *set1 = [[BarChartDataSet alloc] initWithEntries:[yVals copy] label:@"The year 2017"];
     
     [set1 setColors:ChartColorTemplates.material];
     

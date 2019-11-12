@@ -31,7 +31,7 @@
     
     NinaPagerView *ninapagerView = [[NinaPagerView alloc] initWithFrame:CGRectMake(0, 0, kSCREENWIDTH, 44.0f)
                                                              WithTitles:titleArray
-                                                                WithVCs:vcsArray];
+                                                            WithObjects:vcsArray];
     
     [self.view addSubview:ninapagerView];
 }

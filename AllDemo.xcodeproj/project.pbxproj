@@ -181,6 +181,7 @@
 		6112BB20214B615900792372 /* PieItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6112BB1F214B615900792372 /* PieItemModel.m */; };
 		611B0029216C55D300C700CC /* SolarTermTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 611B0028216C55D300C700CC /* SolarTermTool.m */; };
 		611E11871F05FC4B009AF547 /* MoveCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 611E11861F05FC4B009AF547 /* MoveCollectionViewController.m */; };
+		61320A142320B6BD00898BFC /* UserDefaultsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 61320A132320B6BD00898BFC /* UserDefaultsHelper.m */; };
 		615FB48020C91B1100C86C44 /* MakeSocketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 615FB47F20C91B1100C86C44 /* MakeSocketViewController.m */; };
 		615FB48320C920E800C86C44 /* SocketUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 615FB48220C920E800C86C44 /* SocketUtility.m */; };
 		616386262041512F00D11056 /* QrCodeScanningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 616386252041512F00D11056 /* QrCodeScanningViewController.m */; };
@@ -500,6 +501,8 @@
 		611B0028216C55D300C700CC /* SolarTermTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SolarTermTool.m; sourceTree = "<group>"; };
 		611E11851F05FC4B009AF547 /* MoveCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoveCollectionViewController.h; sourceTree = "<group>"; };
 		611E11861F05FC4B009AF547 /* MoveCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoveCollectionViewController.m; sourceTree = "<group>"; };
+		61320A122320B6BD00898BFC /* UserDefaultsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefaultsHelper.h; sourceTree = "<group>"; };
+		61320A132320B6BD00898BFC /* UserDefaultsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefaultsHelper.m; sourceTree = "<group>"; };
 		615FB47E20C91B1100C86C44 /* MakeSocketViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MakeSocketViewController.h; sourceTree = "<group>"; };
 		615FB47F20C91B1100C86C44 /* MakeSocketViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MakeSocketViewController.m; sourceTree = "<group>"; };
 		615FB48120C920E800C86C44 /* SocketUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SocketUtility.h; sourceTree = "<group>"; };
@@ -825,6 +828,8 @@
 		0C7546801E12024800681997 /* ToolFile */ = {
 			isa = PBXGroup;
 			children = (
+				61320A122320B6BD00898BFC /* UserDefaultsHelper.h */,
+				61320A132320B6BD00898BFC /* UserDefaultsHelper.m */,
 				0C75A88C1E13984F007FC044 /* HWActivityIndicator.h */,
 				0C75A88D1E13984F007FC044 /* HWActivityIndicator.m */,
 				0C600E471ECC1AEF00D5695C /* HWTimeStyleTool.h */,
@@ -1485,7 +1490,6 @@
 				0C69C80E1E11123E00717ED6 /* Frameworks */,
 				0C69C80F1E11123E00717ED6 /* Resources */,
 				6E6E6813C34E904E92AD6DBB /* [CP] Embed Pods Frameworks */,
-				5AEF632FB1B135B2924FEF38 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1508,7 +1512,7 @@
 					0C69C8101E11123E00717ED6 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = N4D937Q79X;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -1619,30 +1623,32 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5AEF632FB1B135B2924FEF38 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AllDemo/Pods-AllDemo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		6E6E6813C34E904E92AD6DBB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AllDemo/Pods-AllDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/NinaPagerView/NinaPagerView.framework",
+				"${BUILT_PRODUCTS_DIR}/PNChart/PNChart.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SocketRocket/SocketRocket.framework",
+				"${BUILT_PRODUCTS_DIR}/UICountingLabel/UICountingLabel.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NinaPagerView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PNChart.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketRocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICountingLabel.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1655,13 +1661,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AllDemo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1715,6 +1724,7 @@
 				6110C1991FFF162500BDDEF0 /* CustomViewController.m in Sources */,
 				0C7546981E123DD500681997 /* MaskViewController.m in Sources */,
 				61A2CF23211A84CD001F1C0D /* SwitchTableViewCell.m in Sources */,
+				61320A142320B6BD00898BFC /* UserDefaultsHelper.m in Sources */,
 				0C6F0DA21ED284020035B157 /* BarChartViewController.m in Sources */,
 				0C710E3C1E4C08FE00D1F7A7 /* UIImage+ImageRotate.m in Sources */,
 				0C75A8CF1E13A10E007FC044 /* HeadCollectionReusableView.m in Sources */,
@@ -1929,7 +1939,8 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "AllDemo/Charts/AllDemo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Debug;
@@ -1956,7 +1967,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "AllDemo/Charts/AllDemo-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Release;

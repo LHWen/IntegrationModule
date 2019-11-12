@@ -72,7 +72,7 @@
 }
 
 
-//设置head foot视图
+// 设置head foot视图
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {
     if ([kind isEqualToString:W_UICollectionElementKindSectionHeader]) {

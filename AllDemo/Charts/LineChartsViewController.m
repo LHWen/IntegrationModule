@@ -77,7 +77,7 @@
     
     self.lineChartView.legend.enabled = NO;//不显示图例说明
     //    隐藏描述文字，代码如下：
-    self.lineChartView.descriptionText = @"";//不显示，就设为空字符串即可
+//    self.lineChartView.descriptionText = @"";//不显示，就设为空字符串即可
     
     //为柱形图提供数据
     self.lineChartView.data = [self setLineData];
@@ -113,8 +113,10 @@
     }
     
 //    LineChartDataSet *set1 = [[LineChartDataSet alloc] initWithValues:yVals label:@"The year 2017"];
-    LineChartDataSet *set1 = [[LineChartDataSet alloc] initWithValues:yVals1];
-    LineChartDataSet *set2 = [[LineChartDataSet alloc] initWithValues:yVals2];
+//    LineChartDataSet *set1 = [[LineChartDataSet alloc] initWithValues:yVals1];
+//    LineChartDataSet *set2 = [[LineChartDataSet alloc] initWithValues:yVals2];
+    LineChartDataSet *set1 = [[LineChartDataSet alloc] initWithEntries:[yVals1 copy]];
+    LineChartDataSet *set2 = [[LineChartDataSet alloc] initWithEntries:[yVals2 copy]];
     
     [self lineChartDataSet:set1 lineColor:[UIColor colorWithRed:51/255.f green:181/255.f blue:229/255.f alpha:1.f]];
     [self lineChartDataSet:set2 lineColor:[UIColor orangeColor]];
